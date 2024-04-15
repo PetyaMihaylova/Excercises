@@ -17,9 +17,11 @@
             const myVideo = document.getElementById("video1")
 
         function playPause () {
+            console.log(myVideo.pause)
             if(myVideo.pause) {
                 myVideo.play()
-            }else {myVideo.pause()}
+            }else {myVideo.pause()
+            }
         }
     </script>
 </body>

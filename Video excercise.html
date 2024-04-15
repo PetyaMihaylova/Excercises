@@ -7,16 +7,20 @@
 </head>
 <body>
     <video id="video1" width="320" height="240" controls autoplay preload>
-        <source src="...mp4" type="video/mp.4"> Your browser does not support the video.
-         <!-- The script tag allows us to write html inside -->
-         <script>
-            const myVideo = document.getElementById("video1")
-         </script>
-           
-        </video>
-        <button>Play/Pause</button>
+        <source src="...mp4" type="video/mp.4"> Your browser does not support the video. </video>
+        <button onClick="playPause()">Play/Pause</button>
         <button>Big</button>
         <button>Small</button>
         <button>Normal</button>
+         <!-- The script tag allows us to write html inside -->
+         <script>
+            const myVideo = document.getElementById("video1")
+
+        function playPause () {
+            if(myVideo.pause) {
+                myVideo.play()
+            }else {myVideo.pause()}
+        }
+    </script>
 </body>
 </html>

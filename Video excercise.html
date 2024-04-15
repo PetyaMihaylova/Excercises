@@ -9,7 +9,7 @@
     <video id="video1" width="320" height="240" controls autoplay preload>
         <source src="...mp4" type="video/mp.4"> Your browser does not support the video. </video>
         <button onClick="playPause()">Play/Pause</button>
-        <button>Big</button>
+        <button onClick="isBig()">Big</button>
         <button>Small</button>
         <button>Normal</button>
          <!-- The script tag allows us to write html inside -->
@@ -22,6 +22,10 @@
                 myVideo.play()
             }else {myVideo.pause()
             }
+        }
+
+        function isBig() {
+            width=560;
         }
     </script>
 </body>

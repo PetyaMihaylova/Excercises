@@ -43,8 +43,11 @@
       <!-- In the same way, we can take the icon of an application and put it on the Desktop of Windows. If you ever need to achieve this effect for Apple or Windows, go to Apple or Windows to obtain the information of how to achieve it. We can also put the application on any Windows devoce, incl. a Windows phone. I think Nokia is one of them (now nobody uses Nokia anymore). So, we can change the color of the tyle in this way.-->
       <meta name="msapplication-TileColor" content="#ff0000"/>
 
-      <!-- Here we give the name of an image we have locally, so that the icon has this image when put on the Desktop. So this is how we change the image for the Desktop icon. -->
+      <!-- Here we give the name of an image we have locally, so that the icon has this image when put on the Desktop. So this is how we change the image for the Desktop icon.It is the same image that we will see as splashscreen when we open the application and while it is loading -->
       <meta name="msapplication-TileImage" content="image.png"/>
+      
+      <!-- We can send a configuration that is saved in a local file. So, with this, we want something special to happen when we open this application with Microsoft on a Desktop. -->
+      <meta name="msapplication-config" content="browserconfig.xml"/>
 
     <title>Document</title>
 </head>

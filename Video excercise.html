@@ -46,8 +46,15 @@
       <!-- Here we give the name of an image we have locally, so that the icon has this image when put on the Desktop. So this is how we change the image for the Desktop icon.It is the same image that we will see as splashscreen when we open the application and while it is loading -->
       <meta name="msapplication-TileImage" content="image.png"/>
       
-      <!-- We can send a configuration that is saved in a local file. So, with this, we want something special to happen when we open this application with Microsoft on a Desktop. -->
+      <!-- We can send a configuration that is saved in a local file. So, with this, we want something special to happen when we open this application with Microsoft on a Desktop. What standard should this configuration adhere to? Here, we need to read in Microsoft docs what is best for them.-->
       <meta name="msapplication-config" content="browserconfig.xml"/>
+
+      <!-- Here we are going to put a tooltip for our application when it is on the Desktop itself. When we open it, we will have different options for tooltips, so we can configure them as well. -->
+      <meta name="msapplication-tooltip" config="My Tooltip" />
+
+
+
+
 
     <title>Document</title>
 </head>

@@ -14,6 +14,9 @@ div {
     /* How many times I want the animation to repeat. */
     animation-iteration-count: infinite;
 
+    /* We can tell the animation to play in a different direction. normal is the default value. */
+    /* animation-direction: normal; */
+
 }
 
 div:hover {

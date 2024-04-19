@@ -3,6 +3,7 @@ div {
     height: 100px;
     background: red;
     animation-name: example;
+    animation-duration: 4s;;
 
 }
 
@@ -13,12 +14,22 @@ div:hover {
 
 /* The animation has beginning and end. At the beginning, we can say it is 0%, and at the end, it is 100%. We can divide the whole animation into percentages, from beginning till end. Animation allows us to slowly change the styles of a particular element from one to another.*/
 /* The changes are going to be applied within the brackets. */
+/* Instead of percentages, we can use from and to. */
 
 @keyframes example {
-    0% {
+    /* 0% {
 
     }
 
-    100%
+    100% */
+
+    from {
+        background-color: red;
+
+    }
+
+    to {
+        background-color: yellow;
+    }
 
 }

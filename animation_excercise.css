@@ -2,7 +2,7 @@ div {
     width: 100px;
     height: 100px;
     background: red;
-    transition-property: width height;
+    /* transition-property: width height; */
     /* transition-delay: 1s; */
     transition-duration: 2s;
     
@@ -26,7 +26,7 @@ div {
     /* transition-timing-function: cubic-bezier(.17,1,.88,.11) */
 
     /* This is the short hand property transition, which combines the rest: we want it to apply to width, to height, to last 2 seconds, to be linear transition and to have a delay of 1s. */
-    transition: width height 2s linear 1s;
+    transition: width 2s linear 1s;
 
 
 

@@ -1,0 +1,15 @@
+div {
+    width: 100px;
+    height: 100px;
+    background: red;
+    transition-property: width height;
+    transition-duration: 2s;
+    transition-delay: 1s;
+    /* This is the default value of the transition-timing-function: ease. This value uses the so-called "cubic bezier. That is, with "ease", the change will start slowly, then quicken up and then slow down at the end again. */
+    transition-timing-function: ease;
+}
+
+div:hover {
+    width: 200px;
+    height: 200px;
+}

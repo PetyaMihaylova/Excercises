@@ -3,7 +3,9 @@ div {
     height: 100px;
     background: red;
     animation-name: example;
-    animation-duration: 4s;;
+    position: relative;
+    /* If we don't have animation duration, the default value will be 0 and we won't be able to see it. The animation happens so quat we are unable to see it.*/
+    animation-duration: 4s;
 
 }
 
@@ -21,8 +23,20 @@ div:hover {
         background-color: red;
     }
 
-    100% {
+    25% {
         background-color: yellow;
+    }
+
+    50% {
+        background-color: blue;
+    }
+
+    75% {
+        background-color: green;
+    }
+
+    100% {
+        background-color: red;
     }
 
     /* from {

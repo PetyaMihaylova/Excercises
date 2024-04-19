@@ -21,6 +21,8 @@ div:hover {
 @keyframes example {
     0% {
         background-color: red;
+        left: 0;
+        top: 0;
     }
 
     25% {
@@ -29,6 +31,8 @@ div:hover {
 
     50% {
         background-color: blue;
+        left: 200px;
+        top: 0;
     }
 
     75% {

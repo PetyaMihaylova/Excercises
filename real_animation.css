@@ -18,6 +18,7 @@ div {
     /* animation-direction: normal; */
     /* animation-direction: normal | reverse | alternate (first forward, then backward) | alternate-reverse (first backward, then forward) */
 
+    animation-timing-function: ease | ease-in | ease-out | ease-in-out | cubic-bezier();
 }
 
 div:hover {

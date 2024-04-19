@@ -1,7 +1,7 @@
 div {
     width: 100px;
     height: 100px;
-    background: red;
+    background-color: red;
     animation-name: example;
     position: relative;
     /* If we don't have animation duration, the default value will be 0 and we won't be able to see it. The animation happens so quat we are unable to see it.*/
@@ -11,14 +11,17 @@ div {
     /* If we give a negative value to animation-delay, e.g., -2s the animation will start as if already 2 seconds have passed. In this case, since the duration is 4s, the animation starts at the middle. */
     /* animation-delay: -2s; */
 
-    /* How many times I want the animation to repeat. */
-    animation-iteration-count: infinite;
+    /* How many times I want the animation to repeat, e.g 2, 30, infinite, etc. */
+    animation-iteration-count: 1;
 
     /* We can tell the animation to play in a different direction. normal is the default value. */
     /* animation-direction: normal; */
     /* animation-direction: normal | reverse | alternate (first forward, then backward) | alternate-reverse (first backward, then forward) */
 
-    animation-timing-function: ease | ease-in | ease-out | ease-in-out | cubic-bezier();
+    /* animation-timing-function: ease | ease-in | ease-out | ease-in-out | cubic-bezier(); */
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1);
+
+    animation-fill-mode: forwards;
 }
 
 div:hover {
@@ -57,7 +60,7 @@ div:hover {
     }
 
     100% {
-        background-color: red;
+        background-color: black;
         left: 0px;
         top: 0px;
 

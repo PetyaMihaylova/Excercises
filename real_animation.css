@@ -6,13 +6,13 @@ div {
     position: relative;
     /* If we don't have animation duration, the default value will be 0 and we won't be able to see it. The animation happens so quat we are unable to see it.*/
     animation-duration: 4s;
-    
+
     animation-delay: 5s;
     /* If we give a negative value to animation-delay, e.g., -2s the animation will start as if already 2 seconds have passed. In this case, since the duration is 4s, the animation starts at the middle. */
     /* animation-delay: -2s; */
 
     /* How many times I want the animation to repeat. */
-    animation-iteration-count: 2;
+    animation-iteration-count: infinite;
 
 }
 

@@ -20,7 +20,10 @@ div {
     /* transition-timing-function: ease-out */
 
     /* With ease-in-out, animation starts slow, speeds up in the middle, and slows down towards the end again. This is similar to regular ease, but here, in the middle, instead of it being fast, it is normal. */
-    transition-timing-function: ease-in-out
+    /* transition-timing-function: ease-in-out */
+
+   /* Cubic-bezier is exactly the same behavior as ease, ease-in, ease-out, ease-in-out have, but they have all default set values of cubic bezier. This is where we describe how we want the animation to start, then how to continue in the middle, then again in the middle, and finally, at the end. */
+    transition-timing-function: cubic-bezier(.17,1,.88,.11)
 
 
 

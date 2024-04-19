@@ -23,7 +23,10 @@ div {
     /* transition-timing-function: ease-in-out */
 
    /* Cubic-bezier is exactly the same behavior as ease, ease-in, ease-out, ease-in-out have, but they have all default set values of cubic bezier. This is where we describe how we want the animation to start, then how to continue in the middle, then again in the middle, and finally, at the end. */
-    transition-timing-function: cubic-bezier(.17,1,.88,.11)
+    /* transition-timing-function: cubic-bezier(.17,1,.88,.11) */
+
+    /* This is the short hand property transition, which combines the rest: we want it to apply to width, to height, to last 2 seconds, to be linear transition and to have a delay of 1s. */
+    transition: width height 2s linear 1s;
 
 
 

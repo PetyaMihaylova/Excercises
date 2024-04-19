@@ -6,6 +6,13 @@ div {
     position: relative;
     /* If we don't have animation duration, the default value will be 0 and we won't be able to see it. The animation happens so quat we are unable to see it.*/
     animation-duration: 4s;
+    
+    animation-delay: 5s;
+    /* If we give a negative value to animation-delay, e.g., -2s the animation will start as if already 2 seconds have passed. In this case, since the duration is 4s, the animation starts at the middle. */
+    /* animation-delay: -2s; */
+
+    /* How many times I want the animation to repeat. */
+    animation-iteration-count: 2;
 
 }
 
@@ -27,20 +34,28 @@ div:hover {
 
     25% {
         background-color: yellow;
+        left: 200px;
+        top: 0px;
     }
 
     50% {
         background-color: blue;
         left: 200px;
-        top: 0;
+        top: 200px;
     }
 
     75% {
         background-color: green;
+        left: 0px;
+        top: 200px;
+
     }
 
     100% {
         background-color: red;
+        left: 0px;
+        top: 0px;
+
     }
 
     /* from {

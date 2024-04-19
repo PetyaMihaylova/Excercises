@@ -17,19 +17,20 @@ div:hover {
 /* Instead of percentages, we can use from and to. */
 
 @keyframes example {
-    /* 0% {
-
+    0% {
+        background-color: red;
     }
 
-    100% */
+    100% {
+        background-color: yellow;
+    }
 
-    from {
+    /* from {
         background-color: red;
 
     }
 
     to {
-        background-color: yellow;
-    }
-
+        background-color: yellow; */
+    
 }

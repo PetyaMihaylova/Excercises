@@ -12,7 +12,7 @@ div {
     /* animation-delay: -2s; */
 
     /* How many times I want the animation to repeat, e.g 2, 30, infinite, etc. */
-    animation-iteration-count: 1;
+    animation-iteration-count: infinite;
 
     /* We can tell the animation to play in a different direction. normal is the default value. */
     /* animation-direction: normal; */
@@ -33,6 +33,7 @@ div {
 div:hover {
     width: 200px;
     height: 200px;
+    animation-play-state: paused;
 }
 
 /* The animation has beginning and end. At the beginning, we can say it is 0%, and at the end, it is 100%. We can divide the whole animation into percentages, from beginning till end. Animation allows us to slowly change the styles of a particular element from one to another.*/
@@ -46,7 +47,7 @@ div:hover {
         top: 0;
     }
 
-    /* 25% {
+    25% {
         background-color: yellow;
         left: 200px;
         top: 0px;
@@ -61,7 +62,7 @@ div:hover {
     75% {
         background-color: green;
         left: 0px;
-        top: 200px; */
+        top: 200px;
 
     }
 

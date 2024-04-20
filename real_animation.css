@@ -22,7 +22,7 @@ div {
     /* animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1); */
 
     /* When we have the value set to forwards, the animation will stay at its endpoint, rather than return to beginning. */
-    /* animation-fill-mode: forwards | backwards */
+    /* animation-fill-mode: forwards | backwards | both */
     
     animation-fill-mode: forwards;
 }

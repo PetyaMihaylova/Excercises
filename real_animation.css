@@ -19,7 +19,7 @@ div {
     /* animation-direction: normal | reverse | alternate (first forward, then backward) | alternate-reverse (first backward, then forward) */
 
     /* animation-timing-function: ease | ease-in | ease-out | ease-in-out | cubic-bezier(); */
-    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1);
+    /* animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1); */
 
     animation-fill-mode: forwards;
 }
@@ -35,12 +35,12 @@ div:hover {
 
 @keyframes example {
     0% {
-        background-color: red;
+        /* background-color: red; */
         left: 0;
         top: 0;
     }
 
-    25% {
+    /* 25% {
         background-color: yellow;
         left: 200px;
         top: 0px;
@@ -55,7 +55,7 @@ div:hover {
     75% {
         background-color: green;
         left: 0px;
-        top: 200px;
+        top: 200px; */
 
     }
 

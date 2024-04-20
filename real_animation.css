@@ -25,6 +25,9 @@ div {
     /* animation-fill-mode: forwards | backwards | both */
     
     animation-fill-mode: forwards;
+
+    /* Short-hand property for animation:
+    animation: example 5s linear 2s infinite alternate; */
 }
 
 div:hover {

@@ -5,4 +5,5 @@ div {
     border: 1px solid black;
     /* transform: translate(50px, 100px); */
     /* transform: rotate(-20deg); */
+    transform: scale(2, 3);
 }

@@ -11,6 +11,14 @@ div {
 
 }
 
+.cl1 {
+    animation-name: neon;
+    animation-iteration-count: infinite;   
+    animation-direction: alternate-reverse;
+    animation-timing-function: ease;
+
+}
+
 div:hover {
     width: 200px;
     height: 200px;
@@ -24,10 +32,23 @@ div:hover {
         top: 0px;
     }
 
-
     100% {
         background-color: black;
         left: 400px;
         top: 0px;
 
     }
+}
+
+@keyframes neon {
+     0% {
+        color: black;
+        
+    }
+    
+    100% {
+        color: rgba(17, 240, 9, 0.907);
+    
+    }
+}
+    

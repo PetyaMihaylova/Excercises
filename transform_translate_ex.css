@@ -13,6 +13,6 @@ div {
 }
 
 @keyframes test {
-    from {transform: rotateX(70deg)}
-    to {transform: rotateX(360deg)}
+    from {transform: rotateY(70deg)}
+    to {transform: rotateY(360deg)}
 }

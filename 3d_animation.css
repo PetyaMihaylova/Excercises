@@ -6,3 +6,12 @@
     border: 1px solid blue;
     perspective: 100px;
 }
+
+#div2, #div4 {
+    padding: 50px;
+    position: absolute;
+    border: 1px solid black;
+    background-color: 100 100 100 0.5;
+    transform-style: preserve-3d;
+    transform: rotateX('45deg');
+}

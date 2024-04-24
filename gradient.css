@@ -1,0 +1,20 @@
+#grad1 {
+    height: 400px;
+    width: 300px;
+    background-color: teal;
+    /* background-image: linear-gradient(rgba(255, 0, 0, 0), rgba(255, 0, 0, 1)); */
+    /* background-image: repeating-linear-gradient(red, yellow 10%, green 20%); */
+    /* background-image: radial-gradient(circle, red, yellow, green); */
+    /* background-image: radial-gradient(closest side at 60%, red, yellow, green); */
+    /* background-image: radial-gradient(closest corner at 60%, red, yellow, green); */
+    /* background-image: repeating-radial-gradient(red, yellow 10%, green 15%); */
+    /* background-image: conic-gradient(red 45deg, yellow 90deg, green 210deg); */
+    background-image: conic-gradient(red 0deg, red 90deg, yellow 90deg, yellow 180deg, green 180deg, green 270deg);
+    transition: 1s;
+    border-radius: 50%;
+}
+
+#grad1:hover {
+    /* background-image: linear-gradient(to bottom right, red, yellow); */
+    background-image: linear-gradient(66deg, red, orange, yellow, green, blue, violet, purple);
+}

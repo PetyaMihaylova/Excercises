@@ -29,8 +29,9 @@
 // task3
 
 function solve(a,b) {
-   const result = a+b;
-    return result;
+//    const result = a + b;
+    return a+b;
+    
 }
 
-solve(2,4)
+const result = solve(2,4)

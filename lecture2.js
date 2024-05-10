@@ -1,7 +1,18 @@
-const number = 4;
+
+
+// function solve() {
+// var number = 4;
+
+// }
+
+
+// console.log(number);
+// solve()
 
 function solve() {
-console.log(number)
+    const number=4;
+    function solve2() {
+        console.log(number);
+    }
+    solve();
 }
-
-solve()

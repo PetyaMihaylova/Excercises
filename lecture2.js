@@ -34,4 +34,5 @@ function solve(a,b) {
     
 }
 
-const result = solve(2,4)
+const result = solve(2,4);
+console.log(result);

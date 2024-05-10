@@ -9,10 +9,13 @@
 // console.log(number);
 // solve()
 
+const number=4;
 function solve() {
-    const number=4;
+    
     function solve2() {
         console.log(number);
     }
-    solve();
+    solve2();
 }
+
+solve()

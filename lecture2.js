@@ -1,4 +1,4 @@
-
+// task 1
 
 // function solve() {
 // var number = 4;
@@ -9,13 +9,27 @@
 // console.log(number);
 // solve()
 
-const number=4;
-function solve() {
+// -----------------------------
+
+// task2
+
+// const number=4;
+// function solve() {
     
-    function solve2() {
-        console.log(number);
-    }
-    solve2();
+//     function solve2() {
+//         console.log(number);
+//     }
+//     solve2();
+// }
+
+// solve()
+
+// -------------------------------
+
+// task3
+
+function solve(a,b) {
+    console.log(a+b);
 }
 
-solve()
+solve(2,4)

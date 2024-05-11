@@ -42,7 +42,7 @@
 // task4
 
 function solve(a,b) {
-const result =a+b;
+return Number(a)+Number(b);
 }
 const firstNumber ='4';
 const secondNumber ='2';

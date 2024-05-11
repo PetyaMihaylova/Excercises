@@ -41,12 +41,27 @@
 
 // task4
 
-function solve(a,b) {
-return a + b;
+// function solve(a,b) {
+// return a + b;
+// }
+// const firstNumber =9.23;
+// const secondNumber =9.425;
+
+// // console.log(solve(Number(firstNumber), Number(secondNumber)));
+
+// console.log(Number(solve(firstNumber, secondNumber)).toFixed(0));
+
+// -----------------------------------------------
+
+// task5
+
+const jacket = 445.45
+const pants = 130.25
+
+function calcDiscount(product, discountPercent) {
+const discountValue = product*discountPercent/100
+return product-discountValue
 }
-const firstNumber =9.23;
-const secondNumber =9.425;
 
-// console.log(solve(Number(firstNumber), Number(secondNumber)));
-
-console.log(Number(solve(firstNumber, secondNumber)).toFixed(0));
+console.log(calcDiscount(jacket, 10))
+console.log(calcDiscount(pants, 15))

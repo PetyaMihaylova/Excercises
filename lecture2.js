@@ -44,7 +44,7 @@
 function solve(a,b) {
 return (a + b) * 100;
 }
-const firstNumber ='4';
+const firstNumber ='4a';
 const secondNumber ='2';
 
 // console.log(solve(Number(firstNumber), Number(secondNumber)));

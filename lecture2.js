@@ -42,7 +42,7 @@
 // task4
 
 function solve(a,b) {
-return a % b;
+return a === b;
 }
 const firstNumber =9;
 const secondNumber =2;

@@ -42,11 +42,11 @@
 // task4
 
 function solve(a,b) {
-return a !== b;
+return a + b;
 }
-const firstNumber =9;
-const secondNumber =2;
+const firstNumber =9.23;
+const secondNumber =9.425;
 
 // console.log(solve(Number(firstNumber), Number(secondNumber)));
 
-console.log(solve(firstNumber, secondNumber));
+console.log(Number(solve(firstNumber, secondNumber)).toFixed(0));

@@ -42,10 +42,10 @@
 // task4
 
 function solve(a,b) {
-return a / b;
+return a % b;
 }
-const firstNumber =4;
-const secondNumber =2.23;
+const firstNumber =9;
+const secondNumber =2;
 
 // console.log(solve(Number(firstNumber), Number(secondNumber)));
 

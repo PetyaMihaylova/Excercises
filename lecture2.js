@@ -42,9 +42,9 @@
 // task4
 
 function solve(a,b) {
-return Number(a)+Number(b);
+return (a + b) * 100;
 }
 const firstNumber ='4';
 const secondNumber ='2';
 
-console.log(solve(firstNumber, secondNumber))
+console.log(solve(Number(firstNumber), Number(secondNumber)));

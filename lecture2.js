@@ -28,11 +28,23 @@
 
 // task3
 
-function solve(a,b) {
-//    const result = a + b;
-    return a+b;
+// function solve(a,b) {
+// //    const result = a + b;
+//     return a+b;
     
-}
+// }
 
-const result = solve(2,8);
-console.log(solve(2,8));
+// const result = solve(2,8);
+// console.log(solve(2,8));
+
+// ------------------------------
+
+// task4
+
+function solve(a,b) {
+const result =a+b;
+}
+const firstNumber ='4';
+const secondNumber ='2';
+
+console.log(solve(firstNumber, secondNumber))

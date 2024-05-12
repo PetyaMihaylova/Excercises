@@ -26,6 +26,16 @@ const s = "Hello World"
 // at - the difference between it and charAt is that it allows us to use negative indices
 //console.log(s.at(-1))
 
-//extracting string parts
-// const text= 'Cat, Dog, Mouse'
+//extracting string parts with .slice-methods. With it, one can also use negative indices
+const text= 'Cat, Dog, Mouse'
 // console.log(text.slice(0, 3))
+// console.log(text.slice())
+// console.log(text.slice(3))
+// console.log(text.slice(-4,-1))
+
+//extracting string parts with .substring, one cannot use negative indices
+console.log(text.substring(0, 4))
+
+//extracting string parts with .substr() - takes 2 parameters: the index and the length
+console.log(text.substr)
+

@@ -21,3 +21,6 @@ const s = "Hello World"
 
 // charCodeAt(0) - returns the code from the encoding of a particular character or letter
 // console.log(s.charCodeAt(0))
+
+// at - the difference between it and charAt is that it allows us to use negative indices
+console.log(s.at(-1))

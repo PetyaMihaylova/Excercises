@@ -63,5 +63,5 @@ const discountValue = product*discountPercent/100
 return product-discountValue
 }
 
-console.log(calcDiscount(jacket, 10))
-console.log(calcDiscount(pants, 15))
+console.log(typeof calcDiscount(jacket, 10))
+console.log(typeof calcDiscount(pants, 15).toFixed(2))

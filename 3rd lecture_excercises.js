@@ -34,8 +34,14 @@ const text= 'Cat, Dog, Mouse'
 // console.log(text.slice(-4,-1))
 
 //extracting string parts with .substring, one cannot use negative indices
-console.log(text.substring(0, 4))
+// console.log(text.substring(0, 4))
 
-//extracting string parts with .substr() - takes 2 parameters: the index and the length
-console.log(text.substr)
+//extracting string parts with .substr() - takes 2 parameters: the index and the length. .substr() is deprecated
+// console.log(text.substr(0,4))
+
+// const name = 'grigor'
+// console.log(name.toUpperCase())
+
+const name = 'GRIGOR'
+console.log(name.toLowerCase())
 

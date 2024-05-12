@@ -17,4 +17,7 @@ const s = "Hello World"
 // console.log(s[-1])
 
 // charAt
-console.log(s.charAt(0))
+// console.log(s.charAt(0))
+
+// charCodeAt(0) - returns the code from the encoding of a particular character or letter
+// console.log(s.charCodeAt(0))

@@ -18,9 +18,14 @@ const s = "Hello World"
 
 // charAt
 // console.log(s.charAt(0))
+// console.log(charAt(s.length-2))
 
 // charCodeAt(0) - returns the code from the encoding of a particular character or letter
 // console.log(s.charCodeAt(0))
 
 // at - the difference between it and charAt is that it allows us to use negative indices
-console.log(s.at(-1))
+//console.log(s.at(-1))
+
+//extracting string parts
+// const text= 'Cat, Dog, Mouse'
+// console.log(text.slice(0, 3))

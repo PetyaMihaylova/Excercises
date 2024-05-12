@@ -13,4 +13,8 @@ const s = "Hello World"
 // console.log(s[s.length-1])
 
 // we get undefined as a result when requesting an index that doesn't exist
-// console.log(s[109])
+// // console.log(s[109])
+// console.log(s[-1])
+
+// charAt
+console.log(s.charAt(0))

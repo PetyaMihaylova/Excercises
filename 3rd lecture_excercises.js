@@ -27,7 +27,7 @@ const s = "Hello World"
 //console.log(s.at(-1))
 
 //extracting string parts with .slice-methods. With it, one can also use negative indices
-const text= 'Cat, Dog, Mouse'
+// const text= 'Cat, Dog, Mouse'
 // console.log(text.slice(0, 3))
 // console.log(text.slice())
 // console.log(text.slice(3))
@@ -57,4 +57,8 @@ const text= 'Cat, Dog, Mouse'
 // console.log(text2.trim())
 // console.log(text1.trimStart())
 // console.log(text2.trimEnd())
+
+const text = '5'
+console.log(text.padStart(8, '7'));
+console.log(Number(text.padEnd(8, '7')));
 

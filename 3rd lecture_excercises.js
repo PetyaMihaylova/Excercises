@@ -76,7 +76,7 @@ const s = "Hello World"
 // const text = 'Dog, Dog, Cat, Cat'
 // console.log(text.replaceAll('Dog','Cat'))
 
-const text = 'a b,c,d,e,f';
+// const text = 'a b,c,d,e,f';
 // console.log(text.split(","));
 // console.log(text.split(" "));  //  ['a', 'b,c,d,e,f']
 // console.log(text.split(''))        // ['a', ' ', 'b', ',', 'c', ',', 'd', ',', 'e', ',', 'f']
@@ -85,4 +85,7 @@ const text = 'a b,c,d,e,f';
 
 // const arr = [1, 'asd', 789]
 // const userArr = [Petya, Donal, Michael, Conall]
+
+// const text = 'Hello world at location Bulgaria';
+// console.log(text.indexOf('at')); //12
 

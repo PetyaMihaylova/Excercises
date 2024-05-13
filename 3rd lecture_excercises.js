@@ -45,9 +45,16 @@ const text= 'Cat, Dog, Mouse'
 // const name = 'GRIGOR'
 // console.log(name.toLowerCase())
 
-const str1 = 'Hello'
-const str2 = 'World'
-// console.log(str1 + " " + str2)
+// const str1 = 'Hello'
+// const str2 = 'World'
+// // console.log(str1 + " " + str2)
 
-console.log(str1.concat(" ", str2, "!"))
+// console.log(str1.concat(" ", str2, "!"))
+
+// const text1 = "        Hello World"
+// const text2 = "Hello World             "
+// console.log(text1.trim())
+// console.log(text2.trim())
+// console.log(text1.trimStart())
+// console.log(text2.trimEnd())
 

@@ -66,6 +66,9 @@ const s = "Hello World"
 // const text = num.toString();
 // console.log(text.padStart(10,'0'));
 
+// const text = 'Hello World'
+// console.log(text.repeat(2))
+
 const text = 'Hello World'
-console.log(text.repeat(2))
+console.log(text.replace('World','class'))
 

@@ -69,6 +69,14 @@ const s = "Hello World"
 // const text = 'Hello World'
 // console.log(text.repeat(2))
 
-const text = 'Hello World'
-console.log(text.replace('World','class'))
+// const text = 'Hello World Hello World Hello World Hello World Hello World'
+// console.log(text.replace('World','class'))
+// console.log(text.replaceAll('World','class'))
+
+// const text = 'Dog, Dog, Cat, Cat'
+// console.log(text.replaceAll('Dog','Cat'))
+
+const text = 'a,b,c,d,e,f';
+console.log(text.split(","));
+
 

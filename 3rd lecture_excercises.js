@@ -86,6 +86,7 @@ const s = "Hello World"
 // const arr = [1, 'asd', 789]
 // const userArr = [Petya, Donal, Michael, Conall]
 
-// const text = 'Hello world at location Bulgaria';
-// console.log(text.indexOf('at')); //12
+// const text = 'Hello world at location Bulgaria.The world is ours.';
+// // console.log(text.indexOf('at')); //12
+// console.log(text.lastIndexOf('world'))   //37
 

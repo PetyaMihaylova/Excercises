@@ -89,4 +89,5 @@ const s = "Hello World"
 // const text = 'Hello world at location Bulgaria.The world is ours.';
 // // console.log(text.indexOf('at')); //12
 // console.log(text.lastIndexOf('world'))   //37
+// console.log(text.lastIndexOf('best'))   //-1 or does not exist
 

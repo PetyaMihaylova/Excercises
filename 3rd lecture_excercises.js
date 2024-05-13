@@ -58,7 +58,14 @@ const s = "Hello World"
 // console.log(text1.trimStart())
 // console.log(text2.trimEnd())
 
-const text = '5'
-console.log(text.padStart(8, '7'));
-console.log(Number(text.padEnd(8, '7')));
+// const text = '5'
+// console.log(text.padStart(8, '7'));
+// console.log(Number(text.padEnd(8, '7')));
+
+// const num = 5;
+// const text = num.toString();
+// console.log(text.padStart(10,'0'));
+
+const text = 'Hello World'
+console.log(text.repeat(2))
 

@@ -99,4 +99,6 @@ const text = 'Hello world at location Bulgaria.The world is ours.';
 
 // console.log(text.match('o'))  // ['o', index: 4, input: 'Hello world at location Bulgaria.The world is ours.', groups: undefined]
 
-console.log(text.includes('Bulgaria'))
+console.log(text.includes('Bulgaria'))  //true
+console.log(text.includes('Petya'))     //false
+console.log(text.startsWith('world'))   //false

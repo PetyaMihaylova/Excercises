@@ -1,4 +1,4 @@
-const s = "Hello World"
+// const s = "Hello World"
 
 // what is the length of the string?
 // console.log(s.length)
@@ -86,7 +86,7 @@ const s = "Hello World"
 // const arr = [1, 'asd', 789]
 // const userArr = [Petya, Donal, Michael, Conall]
 
-const text = 'Hello world at location Bulgaria.The world is ours.';
+// const text = 'Hello world at location Bulgaria.The world is ours.';
 // console.log(text.indexOf('at')); //12
 // console.log(text.indexOf('at', 29));  //33
 // console.log(text.lastIndexOf('world'))   //37
@@ -99,6 +99,17 @@ const text = 'Hello world at location Bulgaria.The world is ours.';
 
 // console.log(text.match('o'))  // ['o', index: 4, input: 'Hello world at location Bulgaria.The world is ours.', groups: undefined]
 
-console.log(text.includes('Bulgaria'))  //true
-console.log(text.includes('Petya'))     //false
-console.log(text.startsWith('world'))   //false
+// console.log(text.includes('Bulgaria'))  //true
+// console.log(text.includes('Petya'))     //false
+// console.log(text.startsWith('world'))   //false
+// console.log(text.endsWith('Hello'))     //false
+
+const name = "Petya";
+
+const age = ((Math.random())*100).toFixed(0);
+
+function greeting(name,age) {
+    return `Hi, my name is ${name}
+and my age is ${age}.`}
+
+console.log(greeting("Petya",97));

@@ -57,3 +57,8 @@ return msg
 console.log (solve(1))
 
 console.log(2==='2')
+console.log(2+2==='2'+2)
+console.log(2=='2')
+console.log(2===2)
+console.log(2!==2)
+console.log('str'==='str')

@@ -1,8 +1,17 @@
-function solve(condition) {
-    if(condition) {
- console.log 'Hello'
-    }
+// function solve(condition) {
+//     if (condition) {
+//  return ('Hello')
+//     }
 
-}
+// }
 
-console.log (solve())
+// console.log (solve(true)) //Hello
+
+// function solve(condition) {
+//     if (condition) {
+//  return ('Hello')
+//     }
+
+// }
+
+// console.log (solve(false)) //undefined

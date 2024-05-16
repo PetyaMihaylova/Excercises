@@ -103,3 +103,32 @@
 
 //---------------------------------------------------------------
 
+//logical and operator is &&
+//logical or operator is ||
+//check if number is 10 or 20 else return bad number
+
+// function solve (num) {
+//     if(num === 10 || num === 20) {
+//         return 'number is 10 or 20';
+//     }
+//     else {
+//         return 'bad number';
+//     }
+// }
+
+// console.log(solve(-9)) //bad number
+
+//----------------------------------------------------------------
+
+function solve(condition) {
+    let msg;
+if(condition) {
+msg = 'it is a girl';
+}
+else {msg = 'it is a boy'}
+
+return msg
+}
+
+// console.log((solve(true)))  //it is a girl
+// console.log((solve(false)))    //it is a boy

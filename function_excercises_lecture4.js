@@ -67,7 +67,7 @@
 // console.log(true!==true)
 // console.log(true===true)
 
-
+//---------------------------------------------------
 //check if number is between 10 and 20
 // function solve(number) {
 // if(number > 10) {
@@ -84,15 +84,22 @@
 
 // console.log(solve(10))
 
-function solve(num) {
-if(num > 10 && num < 20){
-return 'is between 10 and 20';
-}
-else {
-    return 'is not';
-}
-}
-console.log(solve())
+//------------------------------------------------------------
+
+// function solve(num) {
+// if(num > 10 && num < 20){
+// return 'is between 10 and 20';
+// }
+// else {
+//     return 'is not';
+// }
+// }
+// console.log(solve(22))
+
+//------------------------------------------------------------
 
 // console.log(15 > 10 && 15 < 20)  //true
 // console.log(15 > 10 && 22 < 20)     //false
+
+//---------------------------------------------------------------
+

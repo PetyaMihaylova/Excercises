@@ -39,26 +39,43 @@
 
 //---------------------------------------------------------
 
+// function solve(number) {
+//     let msg;
+//     if (number>0) {
+// msg= 'Greater than 0'
+//     }
+//  if(number<0) {
+//     msg= 'Less than 0'}
+// else if (number===0) {
+//     msg= 'Number equal to 0'
+// }
+
+//     else {msg= 'Not a valid number'}
+// return msg
+// }
+
+// console.log (solve(1))
+
+// console.log(2==='2')
+// console.log(2+2==='2'+2)
+// console.log(2=='2')
+// console.log(2===2)
+// console.log(2!==2)
+// console.log('str'==='str')
+// console.log('str1'==='str')
+// console.log('str1'!=='str')
+// console.log(true!==true)
+// console.log(true===true)
+
+
+//check if number is between 10 and 20
 function solve(number) {
-    let msg;
-    if (number>0) {
-msg= 'Greater than 0'
-    }
- if(number<0) {
-    msg= 'Less than 0'}
-else if (number===0) {
-    msg= 'Number equal to 0'
+if(number > 10) {
+    if(number < 20) 
+return 'Inside the block of the if'
 }
 
-    else {msg= 'Not a valid number'}
-return msg
+
 }
 
-console.log (solve(1))
-
-console.log(2==='2')
-console.log(2+2==='2'+2)
-console.log(2=='2')
-console.log(2===2)
-console.log(2!==2)
-console.log('str'==='str')
+console.log(solve(14))

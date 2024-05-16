@@ -120,15 +120,26 @@
 
 //----------------------------------------------------------------
 
-function solve(condition) {
-    let msg;
-if(condition) {
-msg = 'it is a girl';
-}
-else {msg = 'it is a boy'}
+// function solve(condition) {
+//     let msg;
+// if(condition) {
+// msg = 'it is a girl';
+// }
+// else {msg = 'it is a boy'}
 
-return msg
-}
+// return msg
+// }
 
 // console.log((solve(true)))  //it is a girl
 // console.log((solve(false)))    //it is a boy
+
+//with ternary operator
+condition ? 'return value if it is true':'return value if it is false'
+
+function solve(condition) {
+   const msg = condition ? 'it is a girl': 'it is a boy'
+
+return msg {
+
+}
+}

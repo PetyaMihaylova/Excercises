@@ -136,7 +136,7 @@
 //with ternary operator
 // condition ? 'return value if it is true':'return value if it is false'
 
-function solve(condition) {
+// function solve(condition) {
 // const msg = (10 < 20 && 20 > 15) ? 'it is a girl':'it is a boy'
 // const msg = (10 < 20 && 30 < 15) ? 'it is a girl':'it is a boy'
 // 
@@ -145,3 +145,56 @@ function solve(condition) {
 // return msg 
 // }
 // console.log(solve())
+
+// function solve(dayOfTheWeek) {
+
+// if(dayOfTheWeek==='Monday'){
+//     return 1;
+// }
+// else if(dayOfTheWeek==='Tuesday'){
+//     return 2;
+// }
+// else if(dayOfTheWeek==='Wednesday'){
+//     return 3;
+// }
+// else if(dayOfTheWeek==='Thursday'){
+//     return 4;
+// }
+// else if(dayOfTheWeek==='Friday'){
+//     return 5;
+// }
+// else if(dayOfTheWeek==='Saturday'){
+//     return 6;
+// }
+// else if(dayOfTheWeek==='Sunday'){
+//     return 7;
+// }
+// else {return 'Not a valid day'}
+// }
+
+// console.log(solve('Sunday'))
+
+function solve(dayOfTheWeek){
+    switch(dayOfTheWeek){
+        case 'Monday':
+            return 1;
+        case 'Tuesday':
+            return 2;
+        case 'Wednesday':
+            return 3;
+        case 'Thursday':
+            return 4;
+        case 'Friday':
+            return 5;
+        case 'Saturday':
+            return 6;
+        case 'Sunday':
+            return 7;
+        default: 'Wrong day';
+    }
+}
+
+console.log(solve('Monday'))
+console.log(solve('Thursday'))
+console.log(solve('asd'))
+console.log(solve('-1000'))

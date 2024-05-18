@@ -190,7 +190,8 @@ function solve(dayOfTheWeek){
             return 6;
         case 'Sunday':
             return 7;
-        default: 'Wrong day';
+        default: 
+            return 'Wrong day';
     }
 }
 
@@ -198,3 +199,4 @@ console.log(solve('Monday'))
 console.log(solve('Thursday'))
 console.log(solve('asd'))
 console.log(solve('-1000'))
+console.log(solve('February'))

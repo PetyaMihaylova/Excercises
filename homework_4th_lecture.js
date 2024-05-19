@@ -47,44 +47,79 @@
 
 
 
-function numberOfDays(month, year){
-    const mstring = month.toString(); 
-switch (month.toString()) {
-    case "1":
-        return(`${month} has 31 days in ${year}.`);
-    case "3":
-        return(`${month} has 31 days in ${year}.`);
-    case "5":
-        return(`${month} has 31 days in ${year}.`);
-    case "7":
-        return(`${month} has 31 days in ${year}.`);
-    case "8":
-        return(`${month} has 31 days in ${year}.`);
-    case "10":
-        return(`${month} has 31 days in ${year}.`);
-    case "12":
-      return(`${month} has 31 days in ${year}.`);
+// function numberOfDays(month, year){
+//     const mstring = month.toString(); 
+// switch (month.toString()) {
+//     case "1":
+//         return(`${month} has 31 days in ${year}.`);
+//     case "3":
+//         return(`${month} has 31 days in ${year}.`);
+//     case "5":
+//         return(`${month} has 31 days in ${year}.`);
+//     case "7":
+//         return(`${month} has 31 days in ${year}.`);
+//     case "8":
+//         return(`${month} has 31 days in ${year}.`);
+//     case "10":
+//         return(`${month} has 31 days in ${year}.`);
+//     case "12":
+//       return(`${month} has 31 days in ${year}.`);
       
-    case "4":
-        return(`${month} has 30 days in ${year}.`);
-    case "6":
-        return(`${month} has 30 days in ${year}.`);
-    case "9":
-        return(`${month} has 30 days in ${year}.`);
-    case "11":
-      return(`${month} has 30 days in ${year}.`);
+//     case "4":
+//         return(`${month} has 30 days in ${year}.`);
+//     case "6":
+//         return(`${month} has 30 days in ${year}.`);
+//     case "9":
+//         return(`${month} has 30 days in ${year}.`);
+//     case "11":
+//       return(`${month} has 30 days in ${year}.`);
       
-    case "2":
-      if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {   
-        return(`${month} has 29 days in ${year}.`);
+//     case "2":
+//       if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {   
+//         return(`${month} has 29 days in ${year}.`);
         
-      } else {
-        return(`${month} has 28 days in ${year}.`);
+//       } else {
+//         return(`${month} has 28 days in ${year}.`);
     
-      }
-    default:
-      return'Not a valid month name!';
-    }}
+//       }
+//     default:
+//       return'Not a valid month name!';
+//     }}
+
+// console.log(numberOfDays(2, 1998))  
+// console.log(numberOfDays(2, 2028))
+// console.log(numberOfDays(2, 2032))
+// console.log(numberOfDays(-18, 7896)) 
+
+function numberOfDays(month, year){
+ 
+switch (month) {
+  case 1:
+  case 3:
+  case 5:
+  case 7:
+  case 8:
+  case 10:
+  case 12:
+    return(`${month} has 31 days in ${year}.`);
+    
+  case 4:
+  case 6:
+  case 9:
+  case 11:
+    return(`${month} has 30 days in ${year}.`);
+    
+  case 2:
+    if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {   
+      return(`${month} has 29 days in ${year}.`);
+      
+    } else {
+      return(`${month} has 28 days in ${year}.`);
+  
+    }
+  default:
+    return'Not a valid month name!';
+  }}
 
 console.log(numberOfDays(2, 1998))  
 console.log(numberOfDays(2, 2028))

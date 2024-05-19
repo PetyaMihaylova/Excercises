@@ -316,3 +316,9 @@
 
 //if a string is empty, but has a space in it, it is not an empty string and returns truthy ' '
 // console.log(Boolean(' ')) //true
+
+//every string that has something inside it, is true/truthy
+
+// console.log(Boolean('false')) //true
+// console.log(Boolean('a')) //true
+// console.log(Boolean('101')) //true

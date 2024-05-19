@@ -282,9 +282,15 @@
 // console.log(!!7); //true
 // console.log(!!(-789)); //true
 
-console.log(!Boolean(212)) //false
-console.log(Boolean(-8))  //true
+// console.log(!Boolean(212)) //false
+// console.log(Boolean(-8))  //true
 
 // !!! turns into Boolean and reverses the sign
 // console.log(!!!(0)) //true
 // console.log(!!!(212)) //false
+
+//null is something that is nothing, but it is a falsy value
+const number = 0
+if (null) {
+    console.log('truthy')} 
+else {console.log('falsy')} //falsy

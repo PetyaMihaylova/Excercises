@@ -274,3 +274,6 @@
 
 //the ! in front of Boolean() turns the sign of the Boolean value around
 console.log(!Boolean(0)); //true
+
+//the  !! turn the 0 into Boolean
+console.log(!!0); //false

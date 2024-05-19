@@ -201,43 +201,59 @@
 // console.log(solve('-1000'))
 // console.log(solve('February'))
 
+// --------------------------------------------------------------------------
+
 //with switch case and variable to hold the result, we need break to break the logic 
 //within the switch case, otherwise all results after the right result are
 // considered right as well.
 
-function solve(dayOfTheWeek){
-    let result;
-    switch(dayOfTheWeek){
-        case 'Monday':
-            {result = 1}; //here we can open a new block scope with {} if we want to encapsulate some logic
-            break;
-        case 'Tuesday':
-            result = 2;
-            break;
-        case 'Wednesday':
-            result = 3;
-            break;
-        case 'Thursday':
-            result = 4;
-            break;
-        case 'Friday':
-            result = 5;
-            break;
-        case 'Saturday':
-            result = 6;
-            break;
-        case 'Sunday':
-            result = 7;
-            break;
-        default: 
-            result = 'Wrong day';
+// function solve(dayOfTheWeek){
+//     let result;
+//     switch(dayOfTheWeek){
+//         case 'Monday':
+//             {result = 1}; //here we can open a new block scope with {} if we want to encapsulate some logic
+//             break;
+//         case 'Tuesday':
+//             result = 2;
+//             break; //or instead of break, we can write return result
+//         case 'Wednesday':
+//             result = 3;
+//             break;
+//         case 'Thursday':
+//             result = 4;
+//             break;
+//         case 'Friday':
+//             result = 5;
+//             break;
+//         case 'Saturday':
+//             result = 6;
+//             break;
+//         case 'Sunday':
+//             result = 7;
+//             break;
+//         default: 
+//             result = 'Wrong day';
            
-    }
-    return result;
+//     }
+//     return result;
+// }
+
+// console.log(solve('Monday'))
+// console.log(solve('Thursday'))
+// console.log(solve('asd'))
+// console.log(solve('-1000'))
+// console.log(solve('February'))
+
+// ------------------------------------------------------------
+
+// true / false
+// truthy/ falsy
+
+if(true) {
+    console.log('true') //this is always going to console.log 'true', because the condition is always true
 }
 
-console.log(solve('Monday'))
-console.log(solve('Thursday'))
-console.log(solve('asd'))
-console.log(solve('-1000'))
-console.log(solve('February'))
+if(false) {
+    console.log('true') //this row is never going to be read, because the condition above is always false. basically the condition above says
+    //that if the condition is true, it will be read, however, we have given it to be false, so it will never be read
+}

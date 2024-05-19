@@ -249,11 +249,28 @@
 // true / false
 // truthy/ falsy
 
-if(true) {
-    console.log('true') //this is always going to console.log 'true', because the condition is always true
-}
+//   //nothing happens, because 0
+    //is the same as saying that the condition is false, then nothing will happen
 
-if(false) {
-    console.log('true') //this row is never going to be read, because the condition above is always false. basically the condition above says
-    //that if the condition is true, it will be read, however, we have given it to be false, so it will never be read
-}
+//     if (0) {
+//         console.log('truthy')}
+//     else {console.log('falsy')} //falsy
+
+// console.log(Boolean(0)); //false
+
+
+// if (-1) {
+//     console.log('truthy')} //truthy
+// else {console.log('falsy')} 
+
+// //we can turn falsy or truthy values into real true/false with the help of Boolean()
+
+// console.log(Boolean(-1)); //true
+
+// const (number) = 0
+// if (!number) {
+//     console.log('truthy')} //truthy
+// else {console.log('falsy')} 
+
+//the ! in front of Boolean() turns the sign of the Boolean value around
+console.log(!Boolean(0)); //true

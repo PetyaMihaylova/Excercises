@@ -174,25 +174,62 @@
 
 // console.log(solve('Sunday'))
 
+// function solve(dayOfTheWeek){
+//     switch(dayOfTheWeek){
+//         case 'Monday':
+//             return 1;
+//         case 'Tuesday':
+//             return 2;
+//         case 'Wednesday':
+//             return 3;
+//         case 'Thursday':
+//             return 4;
+//         case 'Friday':
+//             return 5;
+//         case 'Saturday':
+//             return 6;
+//         case 'Sunday':
+//             return 7;
+//         default: 
+//             return 'Wrong day';
+//     }
+// }
+
+// console.log(solve('Monday'))
+// console.log(solve('Thursday'))
+// console.log(solve('asd'))
+// console.log(solve('-1000'))
+// console.log(solve('February'))
+
 function solve(dayOfTheWeek){
+    let result;
     switch(dayOfTheWeek){
         case 'Monday':
-            return 1;
+            result = 1;
+            break;
         case 'Tuesday':
-            return 2;
+            result = 2;
+            break;
         case 'Wednesday':
-            return 3;
+            result = 3;
+            break;
         case 'Thursday':
-            return 4;
+            result = 4;
+            break;
         case 'Friday':
-            return 5;
+            result = 5;
+            break;
         case 'Saturday':
-            return 6;
+            result = 6;
+            break;
         case 'Sunday':
-            return 7;
+            result = 7;
+            break;
         default: 
-            return 'Wrong day';
+            result = 'Wrong day';
+           
     }
+    return result;
 }
 
 console.log(solve('Monday'))

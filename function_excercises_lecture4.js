@@ -201,6 +201,10 @@
 // console.log(solve('-1000'))
 // console.log(solve('February'))
 
+//with switch case and variable to hold the result, we need break to break the logic 
+//within the switch case, otherwise all results after the right result are
+// considered right as well.
+
 function solve(dayOfTheWeek){
     let result;
     switch(dayOfTheWeek){

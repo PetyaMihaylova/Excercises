@@ -267,7 +267,7 @@
 
 // console.log(Boolean(-1)); //true
 
-// const (number) = 0
+// const (number) = 0 //  if 0 is put in a condition, it will be falsy
 // if (!number) {
 //     console.log('truthy')} //truthy
 // else {console.log('falsy')} 
@@ -281,3 +281,10 @@
 // console.log(!!1); //true
 // console.log(!!7); //true
 // console.log(!!(-789)); //true
+
+console.log(!Boolean(212)) //false
+console.log(Boolean(-8))  //true
+
+// !!! turns into Boolean and reverses the sign
+// console.log(!!!(0)) //true
+// console.log(!!!(212)) //false

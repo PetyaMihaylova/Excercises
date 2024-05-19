@@ -209,7 +209,7 @@ function solve(dayOfTheWeek){
     let result;
     switch(dayOfTheWeek){
         case 'Monday':
-            result = 1;
+            {result = 1}; //here we can open a new block scope with {} if we want to encapsulate some logic
             break;
         case 'Tuesday':
             result = 2;

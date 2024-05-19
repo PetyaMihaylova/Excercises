@@ -273,7 +273,11 @@
 // else {console.log('falsy')} 
 
 //the ! in front of Boolean() turns the sign of the Boolean value around
-console.log(!Boolean(0)); //true
+// console.log(!Boolean(0)); //true
 
 //the  !! turn the 0 into Boolean
-console.log(!!0); //false
+// console.log(!!0); //false
+//the  !! turn the 1 into Boolean
+// console.log(!!1); //true
+// console.log(!!7); //true
+// console.log(!!(-789)); //true

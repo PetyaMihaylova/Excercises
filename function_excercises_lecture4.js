@@ -290,7 +290,29 @@
 // console.log(!!!(212)) //false
 
 //null is something that is nothing, but it is a falsy value
-const number = 0
-if (null) {
-    console.log('truthy')} 
-else {console.log('falsy')} //falsy
+// const number = 0
+// if (null) {
+//     console.log('truthy')} 
+// else {console.log('falsy')} //falsy
+
+// if (undefined) {
+//     console.log('truthy')} 
+// else {console.log('falsy')} //falsy
+
+// if (!undefined) {
+//     console.log('truthy')} 
+// else {console.log('falsy')} //truthy
+
+// if (NaN) {
+//     console.log('truthy')} 
+// else {console.log('falsy')} //falsy
+
+// if (!NaN) {
+//     console.log('truthy')} 
+// else {console.log('falsy')} //truthy
+
+//In the strings, there is  just one string that is falsy and this is the empty string ''
+// console.log(Boolean('')) //false
+
+//if a string is empty, but has a space in it, it is not an empty string and returns truthy ' '
+// console.log(Boolean(' ')) //true

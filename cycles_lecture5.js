@@ -107,3 +107,15 @@
 //         solve('Hello world') 
 
 //---------------------------------------
+
+//for loop// for(initialization, condition, increment of initialization value)
+
+function solve(str) {
+
+    for() {
+
+    }
+
+}
+
+solve('Hello world!')

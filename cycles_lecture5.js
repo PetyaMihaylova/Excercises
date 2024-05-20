@@ -107,12 +107,12 @@
 //         solve('Hello world') 
 
 //---------------------------------------
-
-//for loop// for(initialization, condition, increment of initialization value)
+                //    let n = 0;    n <= string.length-1;        n++;
+//for loop// for(initialization; condition; increment of initialization value)
 
 function solve(str) {
 
-    for() {
+    for(let i = 0) {                                                         //i stands for index
 
     }
 

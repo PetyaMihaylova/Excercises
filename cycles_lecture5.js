@@ -107,15 +107,36 @@
 //         solve('Hello world') 
 
 //---------------------------------------
-                //    let n = 0;    n <= string.length-1;        n++;
+                //    let i = 0;    i <= string.length-1;        i++;
 //for loop// for(initialization; condition; increment of initialization value)
+     //i stands for index
 
-function solve(str) {
+// function solve(str) {
 
-    for(let i = 0) {                                                         //i stands for index
+//     for (let index = 0; index < str.length; index++) {      
 
-    }
+//         console.log(str[index])};
+
+// }
+
+// solve('Hello world')
+
+//interesting about the for loop is that it can work without some of the three parts inside the round brackers (). Important is that the 
+//latest ; is present -- otherwise, the for loop will not work.
+
+// function solve(str) {
+
+//     for (let index = 0; index < str.length;) {      
+
+//         console.log(str[index]);
+//         index++};
+
+// }
+// solve('Hello world')
+
+//------------------------------------------
+// this means that even this is a valid for loop
+
+for(;;) {
 
 }
-
-solve('Hello world!')

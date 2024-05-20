@@ -74,3 +74,36 @@
 //     }
     
 //     solve('Hello world')
+
+//------------------------------------------
+
+// function solve(string){
+//     let n = 0;
+    
+//     while (n <= string.length-1) {
+       
+//         console.log(string[n]);
+//         n++
+//     }
+//     }
+    
+//     solve('Hello world')
+
+//-----------------------------------------
+//do{} while() is a version of while(){} loop, however here, after running the code, 
+//it will check if it needs to finish.
+
+// function solve(string){
+//         let n = 0;
+        
+//        do {console.log(string[n])
+//         n++
+//        }
+       
+//        while(n <= string.length-1)
+
+//        }
+        
+//         solve('Hello world') 
+
+//---------------------------------------

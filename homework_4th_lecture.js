@@ -11,16 +11,16 @@
 //     if(score >=90) {
 //         return 'Grade A';
 //     }
-//     if(score >=80) {
+//     else if(score >=80) {
 //         return 'Grade B';
 //     }
-//     if(score >=70) {
+//    else if(score >=70) {
 //         return 'Grade C';
 //     }
-//     if(score >=60) {
+//     else if(score >=60) {
 //         return 'Grade D';
 //     }
-//     if(score <60) {
+//    else if(score <60) {
 //         return 'Grade F';
 //     }
 // }

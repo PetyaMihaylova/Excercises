@@ -173,4 +173,4 @@ function solve(str) {
       console.log('finish')
 
 }
-solve('Hello world') // decrementing by 1
+solve('Hello world') // decrementing by 1// printing the string in reverse order

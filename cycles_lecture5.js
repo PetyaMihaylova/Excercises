@@ -204,3 +204,16 @@
 
 // }
 // solve('Hello world')
+
+//-------------------------------
+
+//In JavaScript, numbers are not iterable. String, Array, Map and Set are iterable. 
+//You cannot reach the index of a number, you have to convert it to string or array or something else.
+
+function solve(str) {
+for (abv of str) {
+    console.log(char)
+}
+
+}
+solve('Hello world')

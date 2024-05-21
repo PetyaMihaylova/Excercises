@@ -210,10 +210,25 @@
 //In JavaScript, numbers are not iterable. String, Array, Map and Set are iterable. 
 //You cannot reach the index of a number, you have to convert it to string or array or something else.
 
-function solve(str) {
-for (abv of str) {
-    console.log(char)
-}
+// function solve(str) {
+// for (abv of str) {
+//     console.log(char)
+// }
 
-}
-solve('Hello world')
+// }
+// solve('Hello world')
+
+//---------------------------------
+//nested for loops. In this case, the inside for loop will be run at every turn of the outside loop
+
+// for( i = 0; i < 3; i++) {
+//     for( j = 0; j < 3; j++) {
+//         console.log(`i =${i}, j = ${j}`)
+
+//     }
+// }
+
+//-------------------------------
+
+const arrNum = [1,2,3,4,5,6,7,8] //spaces don't matter //this is an array with type number
+const arrStr = ['Petya', 'Donal', 'Michael', 'Conall'] //when hoverin above the array name, we see it's type, in this case, type string

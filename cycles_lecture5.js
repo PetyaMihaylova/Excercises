@@ -160,17 +160,47 @@
 
 //-------------------------------------
 
-function solve(str) {
+// function solve(str) {
     
-    for (let index = str.length; index >= 0; index--) {      
+//     for (let index = str.length-1; index >= 0; index--) {      
         
-        if (str[index] === ' ') {
+//         if (str[index] === ' ') {
            
-        }
-        console.log(str[index]);
+//         }
+//         console.log(str[index]);
         
-      }
-      console.log('finish')
+//       }
+//       console.log('finish')
 
-}
-solve('Hello world') // decrementing by 1// printing the string in reverse order
+// }
+// solve('Hello world') // decrementing by 1// printing the string in reverse order
+
+//----------------------------------
+
+//this is a way to print the string from back to forth, skipping every 2nd letter.  
+
+// function solve(str) {
+    
+//         for (let index = str.length-1; index >= 0; index = index-2) {      
+            
+//             if (str[index] === ' ') {
+               
+//             }
+//             console.log(str[index]);
+            
+//           }
+//           console.log('finish')
+    
+//     }
+//     solve('Hello world')
+
+//---------------------------------
+//for Of for loop
+
+// function solve(str) {
+// for (char of str) {
+//     console.log(char)
+// }
+
+// }
+// solve('Hello world')

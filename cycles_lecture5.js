@@ -113,7 +113,8 @@
 
 // function solve(str) {
 
-//     for (let index = 0; index < str.length; index++) {      
+//     for (let index = 0; index < str.length; index++) {    //this is an abstraction that allows us to write everything on one row, instead of on separate rows
+
 
 //         console.log(str[index])};
 
@@ -127,7 +128,6 @@
 // function solve(str) {
 
 //     for (let index = 0; index < str.length;) {      
-
 //         console.log(str[index]);
 //         index++};
 
@@ -137,6 +137,40 @@
 //------------------------------------------
 // this means that even this is a valid for loop
 
-for(;;) {
+// for(;;) {  //this loop is going to turn in perpetuum; there is not much point of such a loop; hoewever, it is technically possible to write it
+
+// }
+
+//-----------------------------------------
+
+// function solve(str) {
+    
+//     for (let index = 0; index < str.length; index++) {      
+        
+//         if (str[index] === ' ') {
+//            break;
+//         }
+//         console.log(str[index]);
+        
+//       }
+//       console.log('finish')
+
+// }
+// solve('Hello world')
+
+//-------------------------------------
+
+function solve(str) {
+    
+    for (let index = str.length; index >= 0; index--) {      
+        
+        if (str[index] === ' ') {
+           
+        }
+        console.log(str[index]);
+        
+      }
+      console.log('finish')
 
 }
+solve('Hello world') // decrementing by 1

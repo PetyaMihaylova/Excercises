@@ -244,5 +244,6 @@ const arrBool = [true, false, true]
 const arrFunc = [one, two]
 const arrArr = [ [] [] []] //we can have an array from arrays, e.g.
 const arrNumArr = [ [1, 2, 3], [1, 2, 3], [1, 2, 3]] //this is an array from number arrays
+const arrMix = [ 156, 'Petya', true, one, two, []]
 
-console.log(arrStr) //(4) ['Petya', 'Donal', 'Michael', 'Conall']
+console.log(arrStr) //(4) ['Petya', 'Donal', 'Michael', 'Conall'] // all arrays, like strings, have a certain length and they are indexed, the way strings are

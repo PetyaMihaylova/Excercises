@@ -257,6 +257,15 @@ const arrMix = [ 156, 'Petya', true, one, two, [], {}]
 
 //if we want to check the type of a certain variable, whether it is an Array, we have to use Array.isArray()
 
-for (item of arrMix){
-    console.log(Array.isArray(item)) // 5x false true false
-}
+//for (item of arrMix){
+ //   console.log(Array.isArray(item)) // 5x false true false
+//}
+//-----------------------------------------------
+
+// for(item of arrMix) {
+//     console.log(typeof item === 'string') //false true 5xfalse
+// }
+
+// for(item of arrMix) {
+//     console.log(typeof(item) === 'number') //true 6xfalse
+// }

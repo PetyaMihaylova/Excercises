@@ -238,12 +238,25 @@ function two(){
 
 }
 
-const arrNum = [1,2,3,4,5,6,7,8] //spaces don't matter //this is an array with type number
-const arrStr = ['Petya', 'Donal', 'Michael', 'Conall'] //when hoverin above the array name, we see it's type, in this case, type string
-const arrBool = [true, false, true]
-const arrFunc = [one, two]
-const arrArr = [ [] [] []] //we can have an array from arrays, e.g.
-const arrNumArr = [ [1, 2, 3], [1, 2, 3], [1, 2, 3]] //this is an array from number arrays
-const arrMix = [ 156, 'Petya', true, one, two, []]
+// const arrNum = [1,2,3,4,5,6,7,8] //spaces don't matter //this is an array with type number
+// const arrStr = ['Petya', 'Donal', 'Michael', 'Conall'] //when hoverin above the array name, we see it's type, in this case, type string
+// const arrBool = [true, false, true]
+// const arrFunc = [one, two]
+// const arrArr = [ [] [] []] //we can have an array from arrays, e.g.
+// const arrNumArr = [ [1, 2, 3], [1, 2, 3], [1, 2, 3]] //this is an array from number arrays
+const arrMix = [ 156, 'Petya', true, one, two, [], {}]
 
-console.log(arrStr) //(4) ['Petya', 'Donal', 'Michael', 'Conall'] // all arrays, like strings, have a certain length and they are indexed, the way strings are
+// console.log(arrStr) //(4) ['Petya', 'Donal', 'Michael', 'Conall'] // 
+
+// for (item of arrMix) {
+//     console.log(item)} //this will print all items of the array
+
+//     for (item of arrMix) {
+//         console.log(typeof(item))} //Here we get the type of the Array to be Object. There is no special Array type yet.
+//------------------------------------------------
+
+//if we want to check the type of a certain variable, whether it is an Array, we have to use Array.isArray()
+
+for (item of arrMix){
+    console.log(Array.isArray(item)) // 5x false true false
+}

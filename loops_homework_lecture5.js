@@ -4,47 +4,51 @@
 // For numbers that are multiples of both 3 and 5, print "FizzBuzz".
 
 
-function numbersTo100(n) {
+// function numbersTo100(n) {
 
     
-    // let arr = Array.from(Array(100).keys()) //I found how to create an array from 1 to 100, but in this case I do not need it in my function
-    debugger
+//     // let arr = Array.from(Array(100).keys()) //I found how to create an array from 1 to 100, but in this case I do not need it in my function
+//     debugger
 
-    for (n = 1; n <= 100; n++) {
-        if (n % 15 === 0)
-            {console.log('Fizzbuzz');}
+//     for (n = 1; n <= 100; n++) {
+//         if (n % 15 === 0)
+//             {console.log('Fizzbuzz');}
 
-        else if (n % 3 === 0)
-            {console.log('Fizz');
+//         else if (n % 3 === 0)
+//             {console.log('Fizz');
                 
-            }
+//             }
         
-        else if (n % 5 === 0)
-            {console.log('Buzz');
+//         else if (n % 5 === 0)
+//             {console.log('Buzz');
                     
-            }
+//             }
 
-        else console.log(n)
-    }}
+//         else console.log(n)
+//     }}
 
-    numbersTo100()
+//     numbersTo100()
     
 // 2.Description: Write a program that iterates through an array of numbers and adds them to a total sum until a negative number is encountered. Finally, print the total sum of the entered numbers.
 // const numbers = [1, 2, 3, 4, 5, 6]; // Sample array with a negative number
 
-// function solve(arr) {
 
-//     const arrNumbers = [1, 2, 3, 4, 5, 6, -1, 9, 11]
-//     const sum = [1, 2, 3, 4, 5, 6, -1].reduce((a, b) => a + b)
-    
-//     let item = [arrNumbers];
-    
-//     do {console.log(item)
-//         console.log(sum)}
-//     while ((item ) >= 0) } 
+// ---------ALTERNATE SOLUTION TO TASK 2----------
 
 
-// solve()
+// const numbers = [1, 2, 3, 4, 5, 6, -1, 9, 11]
+// let totalSum = 0;
+
+// for (let i = 0; i  < numbers.length; i++) {
+//     if (numbers[i] < 0) {
+//         break;
+//     }
+//     totalSum +=  numbers[i]
+//     //totalSum = totalSum + numbers[i] UNDER THE HOOD!
+// }
+
+// console.log(totalSum) //21
+
 
 // 3.Description: Write a program that iterates through an array of passwords and stops when the correct password ("12345") is found. After the correct password is found, print a welcome message.
 // const passwords = ["password1", "password2", "12345", "password3"];

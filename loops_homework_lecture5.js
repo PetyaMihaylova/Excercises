@@ -7,7 +7,7 @@
 function numbersTo100(n) {
 
     
-    let arr = Array.from(Array(100).keys())
+    // let arr = Array.from(Array(100).keys()) //I found how to create an array from 1 to 100, but in this case I do not need it in my function
     debugger
 
     for (n = 1; n <= 100; n++) {

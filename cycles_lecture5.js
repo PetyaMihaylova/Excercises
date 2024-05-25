@@ -238,13 +238,13 @@ function two(){
 
 }
 
-// const arrNum = [1,2,3,4,5,6,7,8] //spaces don't matter //this is an array with type number
-// const arrStr = ['Petya', 'Donal', 'Michael', 'Conall'] //when hoverin above the array name, we see it's type, in this case, type string
+const arrNum = [1,2,3,4,5,6,7,8] //spaces don't matter //this is an array with type number
+//const arrStr = ['Petya', 'Donal', 'Michael', 'Conall'] //when hoverin above the array name, we see it's type, in this case, type string
 // const arrBool = [true, false, true]
 // const arrFunc = [one, two]
 // const arrArr = [ [] [] []] //we can have an array from arrays, e.g.
-// const arrNumArr = [ [1, 2, 3], [1, 2, 3], [1, 2, 3]] //this is an array from number arrays
-const arrMix = [ 156, 'Petya', true, one, two, [], {}]
+const arrNumArr = [ [1, 2, 3], [1, 2, 3], [1, 2, 3]] //this is an array from number arrays
+const arrMix = [ 156, 'Petya', true, one, two, [], {}, null, NaN, undefined]
 
 // console.log(arrStr) //(4) ['Petya', 'Donal', 'Michael', 'Conall'] // 
 
@@ -269,3 +269,82 @@ const arrMix = [ 156, 'Petya', true, one, two, [], {}]
 // for(item of arrMix) {
 //     console.log(typeof(item) === 'number') //true 6xfalse
 // }
+
+// for(item of arrMix) {
+//     console.log(typeof(item) === 'boolean') //2xfalse, true 4xfalse
+// }
+
+// for(item of arrMix) {
+//     console.log(typeof item === 'null') //7xfalse
+// }
+
+// for(item of arrMix) {
+//     console.log(typeof(item) === 'undefined')
+// } //7xfalse
+
+// for(item of arrMix) {
+//     console.log(typeof(item) === 'function') //3xfalse 2xtrue 2xfalse
+// }
+
+// for(item of arrMix) {
+//     console.log(typeof item === 'object') //5xfalse 2xtrue
+// }
+
+// for(item of arrMix) {
+//         console.log(typeof item === 'array') //7xfalse For Array, it is not going to work, despite the fact that we have array inside the brackets
+//     }
+
+// for(item of arrMix) {
+//     console.log(item)  //we write this if we want to type every single value of the array
+// }
+
+function checkTypesOfValuesInArray(arrMix) {
+for( let i=0; i <= arrMix.length; i++) {
+//     {console.log(arrMix[i]) //this prints out each and every item in the array
+// }
+
+const item = arrMix[i]
+
+if(typeof arrMix[i] === 'number' && !isNaN(item)) {
+    console.log(`Index ${i} is a number`)
+}
+else if (typeof arrMix[i] === 'string') {
+    console.log(`Index ${i} is a string`)
+}
+else if (typeof arrMix[i] === 'boolean') {
+    console.log(`Index ${i} is a boolean`)
+
+}
+else if (typeof arrMix[i] === 'object' && !Array.isArray(item) && item !== null) {
+    console.log(`Index ${i} is an object`)
+}
+else if (typeof arrMix[i] === 'object' && Array.isArray(item)) {
+    console.log(`Index ${i} is an array`)
+}
+else if (typeof arrMix[i] === 'null') {
+    console.log(`Index ${i} is a null`)
+
+}
+
+else if (typeof arrMix[i] === 'NaN') {
+    console.log(`Index ${i} is NaN`)}
+
+else if (typeof arrMix[i] === 'undefined') {
+    console.log(`Index ${i} is undefined`)
+}
+
+else if (item === null) {
+    console.log(`Index ${i} is null`)
+}
+
+else if (isNaN(item) &&typeof item !=='function') {
+    console.log(`Index ${i} is NaN`)
+}
+
+else if (typeof item === 'function') {
+    console.log(`Index ${i} is a function`)
+}
+}
+}
+
+checkTypesOfValuesInArray(arrNum)

@@ -246,6 +246,8 @@ const arrArr = [ [] [] []] //we can have an array from arrays, e.g.
 const arrNumArr = [ [1, 2, 3], [1, 2, 3], [1, 2, 3]] //this is an array from number arrays
 const arrMix = [ 156, 'Petya', true, one, two, [], {}, null, NaN, undefined]
 const Reg = [new RegExp('/ ')]
+const map = new Map()
+const set = new Set()
 
 // console.log(arrStr) //(4) ['Petya', 'Donal', 'Michael', 'Conall'] // 
 

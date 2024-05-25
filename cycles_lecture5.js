@@ -238,18 +238,18 @@ function two(){
 
 }
 
-const arrNum = [1,2,3,4,5,6,7,8] //spaces don't matter //this is an array with type number
-const arrStr = ['Petya', 'Donal', 'Michael', 'Conall'] //when hoverin above the array name, we see it's type, in this case, type string
-const arrBool = [true, false, true]
-const arrFunc = [one, two]
-const arrArr = [ [] [] []] //we can have an array from arrays, e.g.
-const arrNumArr = [ [1, 2, 3], [1, 2, 3], [1, 2, 3]] //this is an array from number arrays
+// const arrNum = [1,2,3,4,5,6,7,8] //spaces don't matter //this is an array with type number
+// const arrStr = ['Petya', 'Donal', 'Michael', 'Conall'] //when hoverin above the array name, we see it's type, in this case, type string
+// const arrBool = [true, false, true]
+// const arrFunc = [one, two]
+// const arrArr = [ [] [] []] //we can have an array from arrays, e.g.
+// const arrNumArr = [ [1, 2, 3], [1, 2, 3], [1, 2, 3]] //this is an array from number arrays
 const arrMix = [ 156, 'Petya', true, one, two, [], {}, null, NaN, undefined]
-const Reg = [new RegExp('/ ')]
-const map = new Map()
-const wmap = new WeakMap()
-const set = new Set()
-const wset = new WeakSet()
+// const Reg = [new RegExp('/ ')]
+// const map = new Map()
+// const wmap = new WeakMap()
+// const set = new Set()
+// const wset = new WeakSet()
 
 // console.log(arrStr) //(4) ['Petya', 'Donal', 'Michael', 'Conall'] // 
 
@@ -352,4 +352,4 @@ else if (typeof item === 'function') {
 }
 }
 
-checkTypesOfValuesInArray(arrNum)
+checkTypesOfValuesInArray(arrMix)

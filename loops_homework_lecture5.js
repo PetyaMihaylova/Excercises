@@ -53,19 +53,24 @@
 // 3.Description: Write a program that iterates through an array of passwords and stops when the correct password ("12345") is found. After the correct password is found, print a welcome message.
 // const passwords = ["password1", "password2", "12345", "password3"];
 
-// function findPass(arr) {
-//     debugger
-    
-//     const passArr = [ 'password1', 'password2', '12345', 'password3'];
-//     let index = 0
+const passArr = [ 'password1', 'password2', '12345', 'password3'];
 
-// for (index < passArr.length; index++) {
-//      [index] === '12345';
-//      console.log('Welcome!');}
+function findPass(arr) {
+    debugger
+       
+    for (let index = 0; index < passArr.length; index++) {
+    
+        if (passArr[index] === '12345') {
+     
+     console.log('Welcome!');
+    
+    break;}
+        else {console.log('Pass not found!')
+    }
             
 
-// }
+}}
 
 
 
-// findPass('12345')
+findPass(passArr)

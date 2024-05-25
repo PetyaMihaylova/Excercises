@@ -247,7 +247,9 @@ const arrNumArr = [ [1, 2, 3], [1, 2, 3], [1, 2, 3]] //this is an array from num
 const arrMix = [ 156, 'Petya', true, one, two, [], {}, null, NaN, undefined]
 const Reg = [new RegExp('/ ')]
 const map = new Map()
+const wmap = new WeakMap()
 const set = new Set()
+const wset = new WeakSet()
 
 // console.log(arrStr) //(4) ['Petya', 'Donal', 'Michael', 'Conall'] // 
 

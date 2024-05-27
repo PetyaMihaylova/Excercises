@@ -1,10 +1,21 @@
-//check if a string is palindrome
+//checking if a string is palindrome
 
-function solve(string){
-const fromStart = string
-const stringL = string.length
-let stringToCheck;
-for(let index = stringL-1; index >=0; index--); //we are starting from the back to forth, from the last index
+function solve(string) {
+    const stringL = string.length
+    let stringToCheck = '';
+   
+    for(let index = stringL - 1; index >=0; index--) {
+        
+        stringToCheck = stringToCheck + string[index]
+    }
+    
+    if(string === stringToCheck){
+        return 'String is palindrome'
+    }
+    else {
+        return 'String is not a palindrome'
+    
+    }
 }
 
-console.log(solve('otto'))
+console.log(solve('rushhour'))

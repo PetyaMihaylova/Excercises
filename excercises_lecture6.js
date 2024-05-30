@@ -59,5 +59,30 @@
 // console.log(solve([0,1,2,3,4,5,6,7,7,6,5,4,3,2,1,0]))
 
 //-----------------------------------------
-const random = ["tree", 795, [0, 1, 2]];
-console.log(random[2][2]);
+// const random = ["tree", 795, [0, 1, 2]];
+// console.log(random[2][2]);
+//---------------------------------------
+
+//make a loop to go through the whole array and return 
+//how many times you have encountered number, boolean, and string.
+
+function solve (array) {
+    let numbers = 0;
+    let strings = 0;
+    let booleans = 0;
+
+    for (let element of array) {
+        if (typeof element === 'number') {
+            numbers = numbers+1;
+        }
+        else if (typeof element === 'string') {
+            strings = strings+1;
+        }
+        else if (typeof element === 'boolean') {
+            booleans = booleans+1;
+        }
+    }
+    return(`We have ${numbers} numbers ${strings} strings and ${booleans} booleans`)
+}
+
+console.log(solve([1, 2, 3, true, 'b', false, 4, 'a', 'stop', false, true, 4, 's', 19, false]))

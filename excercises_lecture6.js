@@ -73,23 +73,28 @@ function check(element, type) {
 }
 
 
-function solve (array) {
-    let numbers = 0;
-    let strings = 0;
-    let booleans = 0;
+// function solve (array) {
+//     let numbers = 0;
+//     let strings = 0;
+//     let booleans = 0;
 
-    for (let element of array) {
-        if (check(element, 'number')) { //instead of if(typeof element === 'number')
-            numbers = numbers+1;
-        }
-        else if (check(element, 'string')) { //instead of else if (typeof element === 'string')
-            strings = strings+1;
-        }
-        else if (check(element, 'boolean')) { //instead of else if (typeof element === 'boolean')
-            booleans = booleans+1;
-        }
-    }
-    return(`We have ${numbers} numbers ${strings} strings and ${booleans} booleans`)
-}
+//     for (let element of array) {
+//         if (check(element, 'number')) { //instead of if(typeof element === 'number')
+//             numbers = numbers+1;
+//         }
+//         else if (check(element, 'string')) { //instead of else if (typeof element === 'string')
+//             strings = strings+1;
+//         }
+//         else if (check(element, 'boolean')) { //instead of else if (typeof element === 'boolean')
+//             booleans = booleans+1;
+//         }
+//     }
+//     return(`We have ${numbers} numbers ${strings} strings and ${booleans} booleans`)
+// }
 
-console.log(solve([1, 2, 3, true, 'b', false, 4, 'a', 'stop', false, true, 4, 's', 19, false]))
+// console.log(solve([1, 2, 3, true, 'b', 12]))
+
+//--------------------------------------------
+
+console.log([1, 2, 3, true, 'b', check]) // (6) [1, 2, 3, true, 'b', ƒ]
+const f = check

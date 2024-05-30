@@ -63,8 +63,15 @@
 // console.log(random[2][2]);
 //---------------------------------------
 
+
 //make a loop to go through the whole array and return 
 //how many times you have encountered number, boolean, and string.
+
+function check(element, type) {
+
+    return typeof element === type ? true : false
+}
+
 
 function solve (array) {
     let numbers = 0;
@@ -72,13 +79,13 @@ function solve (array) {
     let booleans = 0;
 
     for (let element of array) {
-        if (typeof element === 'number') {
+        if (check(element, 'number')) { //instead of if(typeof element === 'number')
             numbers = numbers+1;
         }
-        else if (typeof element === 'string') {
+        else if (check(element, 'string')) { //instead of else if (typeof element === 'string')
             strings = strings+1;
         }
-        else if (typeof element === 'boolean') {
+        else if (check(element, 'boolean')) { //instead of else if (typeof element === 'boolean')
             booleans = booleans+1;
         }
     }

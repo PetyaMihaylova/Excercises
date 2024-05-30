@@ -24,36 +24,40 @@
 
 //[1,2,3,4,5,6,6,5,4,3,2,1]
 
-function solve(arr) {
+// function solve(arr) {
     
-    const arrL = arr.length
-    const firstHalfIndexStart = 0
+//     const arrL = arr.length
+//     const firstHalfIndexStart = 0
     
-    const firstHalfIndexEnd = (arrL/2)-1  
-    const secondHalfIndexEnd =  firstHalfIndexEnd+1 //we will start in reverse order, that is, we start backwards
-    const secondHalfIndexStart = arrL-1 //we will start in reverse order, that is, we start backwards
+//     const firstHalfIndexEnd = (arrL/2)-1  
+//     const secondHalfIndexEnd =  firstHalfIndexEnd+1 //we will start in reverse order, that is, we start backwards
+//     const secondHalfIndexStart = arrL-1 //we will start in reverse order, that is, we start backwards
 
-   // console.log(firstHalfIndexStart, 'firstHalfIndexStart', firstHalfIndexEnd, 'firstHalfIndexEnd', secondHalfIndexStart, 'secondHalfIndexStart', secondHalfIndexEnd, 'secondHalfIndexEnd')
+//    // console.log(firstHalfIndexStart, 'firstHalfIndexStart', firstHalfIndexEnd, 'firstHalfIndexEnd', secondHalfIndexStart, 'secondHalfIndexStart', secondHalfIndexEnd, 'secondHalfIndexEnd')
 
-    let firstHalfString = ''
-    let secondHalfString = ''
+//     let firstHalfString = ''
+//     let secondHalfString = ''
 
-    for(let index = firstHalfIndexStart; index <= firstHalfIndexEnd; index++) {
-        firstHalfString = firstHalfString + arr[index]
+//     for(let index = firstHalfIndexStart; index <= firstHalfIndexEnd; index++) {
+//         firstHalfString = firstHalfString + arr[index]
         
-    }
-    console.log(firstHalfString, 'firstHalfString')
+//     }
+//     console.log(firstHalfString, 'firstHalfString')
 
-    for(let index = secondHalfIndexStart; index >= secondHalfIndexEnd; index--) {
-        secondHalfString = secondHalfString + arr[index]
+//     for(let index = secondHalfIndexStart; index >= secondHalfIndexEnd; index--) {
+//         secondHalfString = secondHalfString + arr[index]
         
-    }
-    if(firstHalfString === secondHalfString){
-    console.log('The array is a mirror array')
-}
-else {
-    console.log('The array is not a mirror array')
-}
-}
+//     }
+//     if(firstHalfString === secondHalfString){
+//     console.log('The array is a mirror array')
+// }
+// else {
+//     console.log('The array is not a mirror array')
+// }
+// }
 
-console.log(solve([0,1,2,3,4,5,6,7,7,6,5,4,3,2,1,0]))
+// console.log(solve([0,1,2,3,4,5,6,7,7,6,5,4,3,2,1,0]))
+
+//-----------------------------------------
+const random = ["tree", 795, [0, 1, 2]];
+console.log(random[2][2]);

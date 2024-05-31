@@ -190,3 +190,9 @@ const arr = [1, 2, 3, 4]
 //                                                                   //2 1
 //                                                                  //3 2
 //                                                                  //4 3
+
+//insted of for(element of arr){}, use arr.forEach((value, index, array) => {}), 
+//that is the forEach method on arrays and a callback function
+
+console.log(arr.filter((value, index, array) => {return value !=2})) // instead of arr.forEach, we can use arr.filter and give 
+//a predicate, a condition(filter) for each element of the array to fulfill, as a result, we get a new filtered array as per the filter

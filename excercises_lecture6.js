@@ -117,9 +117,21 @@
 // }
 
 
-const greet = function (name) { //this is called an anonymois function, because it does not have a function name; 
-    //the word name here is used as a name of the parameter alone. In order to use anonymous functions in Node.js, 
-    //we need to attach them to a variable
-    return 'Hello ' + name
-}
-console.log(greet('Pesho')) // Hello Pesho
+// const greet = function (name) { //this is called an anonymois function, because it does not have a function name; 
+//     //the word name here is used as a name of the parameter alone. In order to use anonymous functions in Node.js, 
+//     //we need to attach them to a variable
+//     return 'Hello ' + name
+// }
+// console.log(greet('Pesho')) // Hello Pesho
+
+//---------------------------------------------
+
+//IIFE (immediately invoked function expression)
+//here, we surround the function with round brackets, so it takes the position of the name of the function and we add 
+//another set of () after the expression
+
+// (function () {
+//     console.log('This runs immediately! - IIFE') 
+// }) (
+     
+// )

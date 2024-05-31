@@ -136,10 +136,28 @@
      
 // )
 
-function solve(name = 'User'){
-    console.log('Hello ' + name);
+// function solve(name = 'User'){
+//     console.log('Hello ' + name);
+// }
+
+// solve('Grigor') //Hello undefined/ Hello User/ Hello Grigor //here, 'User' is a default parameter. 
+// //if no argument is given when calling the function, we get Hello undefined. If default name = 'User' or name = 'X' is given
+// //in the function parameters, when calling the function with no argument defined, we get Hello User or Hello X.
+
+//The values that are declared within a function when the function is called are known as an argument. 
+//The variables that are defined when the function is declared are known as parameters
+
+
+//            'Petya', 35, 'Sofia'
+function solve(name, age, city) {
+console.log(name, age, city)
 }
 
-solve('Grigor') //Hello undefined/ Hello User/ Hello Grigor //here, 'User' is a default parameter. 
-//if no parameter is given when calling the function, we get Hello undefined. If default name = 'User' or name = 'X' is given
-//in the function arguments, when calling the function with no parameter defined, we get Hello User or Hello X.
+solve('Petya', 35, 'Sofia', 'Solutions Architect')
+
+
+function solve(...arr) {
+    console.log(...arr)
+    }
+    
+    solve('Petya', 35, 'Sofia', 'Solutions Architect') //Petya 35 Sofia Solutions Architect

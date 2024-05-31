@@ -167,12 +167,26 @@
 //     console.log(msg);
 // }
 
-function solve(callbackfunction){
-callbackfunction('I am called as a callback function')
-}
+// function solve(callbackfunction){
+// callbackfunction('I am called as a callback function')
+// }
 
 // solve (show)
 
 // solve((msg) => {console.log(msg)}) //an anonymous arrow function will arrive as a callback function
 
-const show = (msg) => {console.log(msg)} // a regular arrow function will arrive as a callback function
+// const show = (msg) => {console.log(msg)} // a regular arrow function will arrive as a callback function
+
+// solve(show) //I am called as a callback function
+
+const arr = [1, 2, 3, 4]
+
+// for(let element of arr) { //if we wanted to go through all elements of the array and console.log them, until now, we used to do this
+//     console.log(element);
+// }
+
+// arr.forEach((value, index, array)=> {console.log(value)}) // 1 2 3 4 
+// arr.forEach((value, index, array) => {console.log(value, index)}) // 1 0
+//                                                                   //2 1
+//                                                                  //3 2
+//                                                                  //4 3

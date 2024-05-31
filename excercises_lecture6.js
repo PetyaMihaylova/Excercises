@@ -149,15 +149,30 @@
 
 
 //            'Petya', 35, 'Sofia'
-function solve(name, age, city) {
-console.log(name, age, city)
+// function solve(name, age, city) {
+// console.log(name, age, city)
+// }
+
+// solve('Petya', 35, 'Sofia', 'Solutions Architect')
+
+
+// function solve(...arr) { //here we put all possible arguments later on when 
+// //the function will be called as an array parameter and write ...arr. This is called doing a spread or using a spread operator
+//     console.log(...arr)
+//     }
+    
+//     solve('Petya', 35, 'Sofia', 'Solutions Architect') //Petya 35 Sofia Solutions Architect
+
+// function show(msg){
+//     console.log(msg);
+// }
+
+function solve(callbackfunction){
+callbackfunction('I am called as a callback function')
 }
 
-solve('Petya', 35, 'Sofia', 'Solutions Architect')
+// solve (show)
 
+// solve((msg) => {console.log(msg)}) //an anonymous arrow function will arrive as a callback function
 
-function solve(...arr) {
-    console.log(...arr)
-    }
-    
-    solve('Petya', 35, 'Sofia', 'Solutions Architect') //Petya 35 Sofia Solutions Architect
+const show = (msg) => {console.log(msg)} // a regular arrow function will arrive as a callback function

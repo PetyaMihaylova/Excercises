@@ -194,5 +194,10 @@ const arr = [1, 2, 3, 4]
 //insted of for(element of arr){}, use arr.forEach((value, index, array) => {}), 
 //that is the forEach method on arrays and a callback function
 
-console.log(arr.filter((value, index, array) => {return value !=2})) // instead of arr.forEach, we can use arr.filter and give 
-//a predicate, a condition(filter) for each element of the array to fulfill, as a result, we get a new filtered array as per the filter
+// console.log(arr.filter((value, index, array) => {return value !=2})) //returns [1, 3, 4] instead of arr.forEach, we can use arr.filter and give 
+// //a predicate, a condition(filter) for each element of the array to fulfill, as a result, we get a new filtered array as per the filter
+// console.log(arr.filter((value, index, array) => {return index !=2}))// returns [1, 2, 4], that is, values, which index !=2
+
+//arr.forEach and arr.filter both return the result in the form of an array
+// console.log(arr.sort((a, b) => {return a - b})) //1, 2, 3, 4
+// console.log(arr.sort((a, b) => {return b - a})) // [4, 3, 2, 1]

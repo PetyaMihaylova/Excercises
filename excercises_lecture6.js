@@ -100,24 +100,26 @@
 // const f = check
 // console.log(f(1, 'number'))
 
-console.log(check(1, 'number')) //we can console.log a function that has been defined with the name function
+// console.log(check(1, 'number')) //we can console.log a function that has been defined with the name function
 // before it has been defined, unlike a variable before initialization, which cannot be console.logged before initialization
 
-console.log(check1(1, 'number')) //here, JS does not treat the arrow function as a function that has been declared with 
+// console.log(check1(1, 'number')) //here, JS does not treat the arrow function as a function that has been declared with 
 //the function keyword, but rather treat it as an ordinary variable to which our function has been attached, hence will give us
 // a reference error, because acc. to JS we are trying to console log a variable, whoch has not been defined yet
 
-function check(element, type) {
+// function check(element, type) {
 
-    return typeof element === type ? true : false
-}
+//     return typeof element === type ? true : false
+// }
 
-const check1 = (element, type) => {
-    return typeof element === type ? true : false
-}
+// const check1 = (element, type) => {     //this function is also completely anonymous, it has no name
+//     return typeof element === type ? true : false
+// }
+
 
 const greet = function (name) { //this is called an anonymois function, because it does not have a function name; 
     //the word name here is used as a name of the parameter alone. In order to use anonymous functions in Node.js, 
     //we need to attach them to a variable
-    return 'Hello' + name
+    return 'Hello ' + name
 }
+console.log(greet('Pesho')) // Hello Pesho

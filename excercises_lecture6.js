@@ -135,3 +135,11 @@
 // }) (
      
 // )
+
+function solve(name = 'User'){
+    console.log('Hello ' + name);
+}
+
+solve('Grigor') //Hello undefined/ Hello User/ Hello Grigor //here, 'User' is a default parameter. 
+//if no parameter is given when calling the function, we get Hello undefined. If default name = 'User' or name = 'X' is given
+//in the function arguments, when calling the function with no parameter defined, we get Hello User or Hello X.

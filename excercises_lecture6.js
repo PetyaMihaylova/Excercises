@@ -115,3 +115,9 @@ function check(element, type) {
 const check1 = (element, type) => {
     return typeof element === type ? true : false
 }
+
+const greet = function (name) { //this is called an anonymois function, because it does not have a function name; 
+    //the word name here is used as a name of the parameter alone. In order to use anonymous functions in Node.js, 
+    //we need to attach them to a variable
+    return 'Hello' + name
+}

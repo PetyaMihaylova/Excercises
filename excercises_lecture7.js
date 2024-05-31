@@ -21,3 +21,13 @@
 // Output: "Password Strength: Strong"
 // Input: password
 // Output: "Password Strength: Weak"
+
+//Solution:
+
+const a = 'a'
+const A = 'A'
+const x = 2
+console.log(a >= 'a' && a <= 'z') //true //this is how we check if const a is a lowercase letter
+console.log(A >= 'Z' && a <= 'Z') //false // //this is how we check if const A is an uppercase letter
+console.log(A <= 'Z') //true
+console.log(x >= 'a' && x <= 'z') //false

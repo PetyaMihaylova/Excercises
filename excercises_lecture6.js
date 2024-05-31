@@ -103,6 +103,10 @@
 console.log(check(1, 'number')) //we can console.log a function that has been defined with the name function
 // before it has been defined, unlike a variable before initialization, which cannot be console.logged before initialization
 
+console.log(check1(1, 'number')) //here, JS does not treat the arrow function as a function that has been declared with 
+//the function keyword, but rather treat it as an ordinary variable to which our function has been attached, hence will give us
+// a reference error, because acc. to JS we are trying to console log a variable, whoch has not been defined yet
+
 function check(element, type) {
 
     return typeof element === type ? true : false

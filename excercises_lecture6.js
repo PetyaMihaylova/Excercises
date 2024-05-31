@@ -67,10 +67,10 @@
 //make a loop to go through the whole array and return 
 //how many times you have encountered number, boolean, and string.
 
-function check(element, type) {
+// function check(element, type) {
 
-    return typeof element === type ? true : false
-}
+//     return typeof element === type ? true : false
+// }
 
 
 // function solve (array) {
@@ -96,5 +96,18 @@ function check(element, type) {
 
 //--------------------------------------------
 
-console.log([1, 2, 3, true, 'b', check]) // (6) [1, 2, 3, true, 'b', ƒ]
-const f = check
+// console.log([1, 2, 3, true, 'b', check]) // (6) [1, 2, 3, true, 'b', ƒ]
+// const f = check
+// console.log(f(1, 'number'))
+
+console.log(check(1, 'number')) //we can console.log a function that has been defined with the name function
+// before it has been defined, unlike a variable before initialization, which cannot be console.logged before initialization
+
+function check(element, type) {
+
+    return typeof element === type ? true : false
+}
+
+const check1 = (element, type) => {
+    return typeof element === type ? true : false
+}

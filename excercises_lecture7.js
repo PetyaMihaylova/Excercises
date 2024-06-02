@@ -22,12 +22,98 @@
 // Input: password
 // Output: "Password Strength: Weak"
 
-//Solution:
 
-const a = 'a'
-const A = 'A'
-const x = 2
-console.log(a >= 'a' && a <= 'z') //true //this is how we check if const a is a lowercase letter
-console.log(A >= 'Z' && a <= 'Z') //false // //this is how we check if const A is an uppercase letter
-console.log(A <= 'Z') //true
-console.log(x >= 'a' && x <= 'z') //false
+// function checkPass(pass){
+
+// let criteria = 0;
+// let length = pass.length >= 8;
+// let upperCase = false;
+// let lowerCase = false;
+// let digit = false;
+// let specialChar = false;
+
+// if(length) {
+//     crieria = criteria + 1;
+// }
+
+// else if(criteria === 0 || criteria === 1){
+//     console.log('Password is weak', criteria);}
+
+// else if(criteria === 2 || criteria === 3){
+//     console.log('Password is moderate', criteria);}
+
+// else if(critera === 4 || criteria ===5){
+//     console.log('Password is strong', criteria);}
+// }
+
+// checkPass('123abv!@#yu7')
+
+// ------------------------------the below is wrong, fix it
+
+function checkPass(pass){
+
+const lengthCheck = pass.length >= 8;
+const upperCase = (str) => /A-Z/.test(str);
+const lowerCase = (str) => /a-z/.test(str);
+const digit = (str) => /\d/.test(str);
+const specialChar = (str) => /`!@#$%^&*()_+-\=\[\]{};':"\\|,.<>\/?~]/.test(str);
+
+const lowerCheck = lowerCase(pass);
+const upperCheck = upperCase(pass);
+const digitCheck = digit(pass);
+const specialCharCheck = specialChar(pass);
+
+let criteriaMet = 0;
+if(lengthCheck){criteriaMet++;}
+if(lowerCheck){criteriaMet++;}
+if(digitCheck){criteriaMet++;}
+if(specialCharCheck){criteriaMet++;}
+if(upperCheck){criteriaMet++}
+
+if(criteriaMet >=4){console.log('Strong Password');}
+else if(criteriaMet === 2 || criteriaMet === 3){console.log ('Medium strong Password');}
+else {console.log ('Weak Password')}
+}
+
+checkPass('p123456!78MO@$W%')
+
+//-----------------------------
+
+// function printStrongNess(input_string) { 
+//     const n = input_string.length; 
+//     // Checking lower alphabet in string 
+//     let hasLower = false; 
+//     let hasUpper = false; 
+//     let hasDigit = false; 
+//     let specialChar = false; 
+//     const normalChars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890 "; 
+    
+//     for (let i = 0; i < n; i++) { 
+//       if (input_string[i] >= "a" && input_string[i] <= "z") { 
+//         hasLower = true; 
+//       } 
+//       if (input_string[i] >= "A" && input_string[i] <= "Z") { 
+//         hasUpper = true; 
+//       } 
+//       if (input_string[i] >= "0" && input_string[i] <= "9") { 
+//         hasDigit = true; 
+//       } 
+//       if (!normalChars.includes(input_string[i])) { 
+//         specialChar = true; 
+//       } 
+//     } 
+    
+//     // Strength of password 
+//     let strength = "Weak"; 
+//     if (hasLower && hasUpper && hasDigit && specialChar && n >= 8) { 
+//       strength = "Strong"; 
+//     } else if ((hasLower || hasUpper) && specialChar && n >= 6) { 
+//       strength = "Moderate"; 
+//     } 
+    
+//     console.log(`Strength of password: ${strength}`); 
+//   } 
+    
+//   // Driver code 
+//   const input_string = "GeeksforGeeks!@12"; 
+//   printStrongNess(input_string); 

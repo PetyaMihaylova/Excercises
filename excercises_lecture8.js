@@ -88,10 +88,24 @@ const number = 6
 const solve = (text, number, totalWordsFunc) => {
     
 const totalWords = totalWordsFunc(text)
+let lengthOfLongestWord = 1
+let lengthOfShortestWord = 1
 const arrayOfWords = text.split(' ') 
 for(let word of arrayOfWords){
-console.log(word)}
+
+if(word.length > lengthOfLongestWord)
+{word.length = lengthOfLongestWord}
+
+else if lengthOfShortestWord === 0{
+    lengthOfShortestWord = word.length
 }
+
+else if (word.length < lengthOfShortestWord)
+    {word.length = lengthOfShortestWord}
+
+}
+}
+
 
 const calcTotalNumberOfWords = (text) => {
         return text.split(' ').length;}

@@ -82,36 +82,65 @@
 // console.log(solve1(sentence, number))
 //---------------------------------------------------
 
-let text = 'More pochivka zima ski'
-const number = 6
+// let text = 'More pochivka zima ski'
+// const number = 6
 
-const solve = (text, number, totalWordsFunc) => {
+// const solve = (text, number, calcTotalNumberOfWords, calcAverageWordLength) => {
+
     
-const totalWords = totalWordsFunc(text)
-let lengthOfLongestWord = 1
-let lengthOfShortestWord = 1
-const arrayOfWords = text.split(' ') 
-for(let word of arrayOfWords){
+// const totalWords = calcTotalNumberOfWords(text)
+// let lengthOfLongestWord = 1
+// let lengthOfShortestWord = 1
+// let totalLength = 0
 
-if(word.length > lengthOfLongestWord)
-{word.length = lengthOfLongestWord}
+// const arrayOfWords = text.split(' ') 
+// for(let word of arrayOfWords){
 
-else if lengthOfShortestWord === 0{
-    lengthOfShortestWord = word.length
+// if(word.length > lengthOfLongestWord)
+// {word.length = lengthOfLongestWord}
+
+// else if (lengthOfShortestWord === 0) {
+//     lengthOfShortestWord = word.length}
+
+// else if (word.length < lengthOfShortestWord)
+//     {word.length = lengthOfShortestWord}
+
+// totalLength = totalLength + word.length 
+//     {return totalLength/totalWords}
+
+// }
+// const AverageWordLength = calcAverageWordLength(totalLength, totalWords)
+// console.log(totalWords, 'totalWords')
+// console.log(lengthOfLongestWord, 'lengthOfLongestWord')
+// console.log(lengthOfShortestWord, 'lengthOfShortestWord')
+// console.log(AverageWordLength, 'averageWordLength')
+// }
+
+// const calcTotalNumberOfWords = (text) => {
+//         return text.split(' ').length;
+//     }
+// const calcAverageWordLength = (totalLength, totalWords) => {
+//     return totalLength/ totalWords
+// }
+
+
+// solve('More pochivka zima ski', 6, calcTotalNumberOfWords, calcAverageWordLength)
+
+const arr = [1, 2, 3, 4, 5, 6]
+
+function executor (callback, arr) {
+    for(num of arr){
+        callback(num)}
+    }
+
+function cLogCallBack (num, arr) {
+
+        console.log(num)
+
 }
 
-else if (word.length < lengthOfShortestWord)
-    {word.length = lengthOfShortestWord}
+executor(cLogCallBack, arr)
 
-}
-}
+//forEach
 
-
-const calcTotalNumberOfWords = (text) => {
-        return text.split(' ').length;}
-
-const calcLongestWord = (text) => {
-    let lengthOfLongestWord = '' 
-}
-
-solve('More pochivka zima ski', 6, calcTotalNumberOfWords)
+arr.forEach(cLogCallBack) === forEach(cLogCallBack, arr) //these two are always equivalent

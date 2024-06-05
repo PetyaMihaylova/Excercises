@@ -152,3 +152,7 @@
 
 const arr = [1, 2, 3, 4, 5, 6]
 arr.push(7) //this is a method to add an item at the end of the array
+console.log(arr) //(7) [1, 2, 3, 4, 5, 6, 7]
+
+const result = arr.push(7) 
+console.log(result) // in this way, we can return the new length of the array

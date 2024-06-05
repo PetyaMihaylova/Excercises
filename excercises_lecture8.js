@@ -150,7 +150,7 @@
 
 //-------------------------------------
 
-const arr = [1, 2, 3, 4, 5, 6]
+// const arr = [1, 2, 3, 4, 5, 6]
 // arr.push(7) //this is a method to add an item at the end of the array
 // console.log(arr) //(7) [1, 2, 3, 4, 5, 6, 7]
 
@@ -158,9 +158,16 @@ const arr = [1, 2, 3, 4, 5, 6]
 // console.log(newLengthOfTheArray) // in this way, we can return the new length of the array, same as console.log(arr.length)
 
 // const removed = arr.pop() //arr.pop() removes the last item in the array
-// console.log(removed) //6
+// console.log(removed) //6 -returns the removed element
 
 // console.log(arr[arr.length-1]) //5 - this returns the element of the last index, that is, 5 after we removed 6 with the above line
 
-arr.shift() //this removes the first element of the array
-console.log(arr) //(5) [2, 3, 4, 5, 6]
+// arr.shift() //this removes the first element of the array
+// console.log(arr) //(5) [2, 3, 4, 5, 6]
+// const firstElementRemoved = arr.shift()
+// console.log(firstElementRemoved) //2
+
+const arr = [1, 2, 3, 4, 5, 6]
+const newArrayLength = arr.unshift(0)
+console.log(newArrayLength) //7 //arr.unshift returns the new length of the array
+// console.log(arr) //(5) [0, 3, 4, 5, 6]

@@ -126,21 +126,29 @@
 
 // solve('More pochivka zima ski', 6, calcTotalNumberOfWords, calcAverageWordLength)
 
-const arr = [1, 2, 3, 4, 5, 6]
+// const arr = [1, 2, 3, 4, 5, 6]
 
-function executor (callback, arr) {
-    for(num of arr){
-        callback(num)}
-    }
+// function executor (callback, arr) {
+//     for(num of arr){
+//         callback(num)}
+//     }
 
-function cLogCallBack (num, arr) {
+// function cLogCallBack (num, arr) {
 
-        console.log(num)
+//         console.log(num)
 
-}
+// }
 
-executor(cLogCallBack, arr)
+// executor(cLogCallBack, arr)
 
 //forEach
 
-arr.forEach(cLogCallBack) === forEach(cLogCallBack, arr) //these two are always equivalent
+// arr.forEach(cLogCallBack) === forEach(cLogCallBack, arr) //these two are always equivalent
+
+// arr.forEach((num, index, arr) => {console.log(num, 'number', index, 'index', arr, 'array')}) //the forEach() method is usu. used with an anonymous arrow function
+// arr.forEach((num) => {console.log(num, 'number')})
+
+//-------------------------------------
+
+const arr = [1, 2, 3, 4, 5, 6]
+arr.push(7) //this is a method to add an item at the end of the array

@@ -167,10 +167,13 @@
 // const firstElementRemoved = arr.shift()
 // console.log(firstElementRemoved) //2
 
-const arr = [1, 2, 3, 4, 5, 6]
-const newArrayLength = arr.unshift(0)
-console.log(newArrayLength) //7 //arr.unshift returns the new length of the array
+// const arr = [1, 2, 3, 4, 5, 6]
+// const newArrayLength = arr.unshift(0)
+// console.log(newArrayLength) //7 //arr.unshift returns the new length of the array
 // console.log(arr) //(5) [0, 3, 4, 5, 6]
 
 //In summray, arr.push and arr.unshift return the new length (the methods for adding return the new length), while
 //arr.shift and arr.pop return the removed element
+
+// const obj = {a:1, b:2, c:3} //this is object; consists of name:value pairs, surrounded by {}
+// const customer = {name: Petya, age:35} //this is also an object; the syntax of the object is the same syntax like in the block scope

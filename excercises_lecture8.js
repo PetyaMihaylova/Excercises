@@ -178,6 +178,7 @@
 // const obj = {a:1, b:2, c:3} //this is object; consists of name:value pairs, surrounded by {}
 // const customer = {name: Petya, age:35} //this is also an object; the syntax of the object is the same syntax like in the block scope
 
+//-------arr.reverse() vs. arr.toReversed()-------
 const arr = [1, 2, 3, 4, 5, 6]
 // console.log(arr.reverse()) //(6) [6, 5, 4, 3, 2, 1]
 // console.log(arr) //Now that we have reversed the initial array with arr.reverse, when we console.log the initial array,

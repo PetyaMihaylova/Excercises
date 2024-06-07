@@ -75,6 +75,8 @@
 
 const arr = ['1', '2', '3', '4']
 const arr1 = ['5', '6', '7', '8']
-console.log(arr + arr1) //1,2,3,45,6,7,8
-console.log(arr + ',' + arr1) //1,2,3,4,5,6,7,8
+console.log(arr + arr1) //1,2,3,45,6,7,8 //if u just use the + sign, where the arrays meet, u are gonna have a concatenation instead
+console.log(arr + ',' + arr1) //1,2,3,4,5,6,7,8 //this is a string
+console.log(typeof(arr+arr1)) //string
+console.log(arr.concat(arr1)) // (8) ['1', '2', '3', '4', '5', '6', '7', '8']
 

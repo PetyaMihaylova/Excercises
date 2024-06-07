@@ -21,7 +21,7 @@
 // //we can remove {} and return. Similarly, if we have just 1 parameter in the (), we can remove the ()
 // arrowFunction('hello 2')
 
-const arr = ['Hello', 'World', 'Good', 'Bad']
+// const arr = ['Hello', 'World', 'Good', 'Bad']
 
 // const arrowFunction = (text, index) => console.log(text, index) 
 // // arr.forEach(arrowFunction)
@@ -49,6 +49,32 @@ const arr = ['Hello', 'World', 'Good', 'Bad']
 // console.log(newArray) //we get undefined, because forEach()method does not have a return
 //We use an anonymous function when we do not have to re-use the logic
 
-const newArr = arr.map(element => element+ '!')
+// const newArr = arr.map(element => element+ '!')
 
-console.log(newArr) //the map() method will run the callback function for each element of the array//(4) ['Hello!', 'World!', 'Good!', 'Bad!']
+// console.log(newArr) //the map() method will run the callback function for each element of the array and create an array of new elements
+//(4) ['Hello!', 'World!', 'Good!', 'Bad!']
+
+
+// const newArr1 = arr.map(element => `<p>${element} +'!'</p>`) 
+// console.log(newArr1) // (4) ["<p>Hello+ '!'</p>", "<p>World+ '!'</p>", "<p>Good+ '!'</p>", "<p>Bad+ '!'</p>"]
+
+// arr = ['1', '2', '3', '4']
+// const doubArr1 = arr.map(element => element*2) 
+// console.log(doubArr1) 
+
+// const arr = ['1', '2', '3', '4']
+
+// function solve (arr){
+//     arr = arr.map(Number) //the map()method, together with the Number callback function is going to be run on every element in the array //(4) [3, 4, 5, 6]
+//     const newArr = arr.map(element => element +2)
+//     console.log(newArr);
+// }
+
+
+// solve(arr)
+
+const arr = ['1', '2', '3', '4']
+const arr1 = ['5', '6', '7', '8']
+console.log(arr + arr1) //1,2,3,45,6,7,8
+console.log(arr + ',' + arr1) //1,2,3,4,5,6,7,8
+

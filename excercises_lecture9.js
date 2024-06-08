@@ -115,6 +115,8 @@
 const arr = [1, 2, 3, 4]
 // let result = arr.every(number => number < 5) 
 // console.log(result) //true
-let result = arr.every(number => typeof number === 'number' && number <5) 
-console.log(result) //true 
+// let result = arr.every(number => typeof number === 'number' && number <5) 
+// console.log(result) //true 
+let result = arr.some(element => typeof element === 'number')
+console.log(result) //true
 

@@ -129,6 +129,34 @@
 // const result = arr.fill('!', 2)
 // console.log(result) //(4) [1, 2, '!', '!']
 
-const arr = ['spray', 'elite', 'exuberant', 'cat', 'beer', 'dog', 'coffee']
-const result = arr.filter() //arr.filter works like all other methods with a callback function, which will be run for each and every one of the elements
-console.log(result)
+// const arr = ['spray', 'elite', 'exuberant', 'cat', 'beer', 'dog', 'coffee']
+// const result = arr.filter() //arr.filter works like all other methods with a callback function, which will be run for each and every one of the elements
+// const result = arr.filter((element, index, array) => element.length > 6) 
+// console.log(result) //(1) ['exuberant']
+// const result = arr.filter((element, index, array) => element.length < 6) 
+// console.log(result) //(5) ['spray', 'elite', 'cat', 'beer', 'dog']
+
+
+// let resultArray = []
+// const forEachResult = arr.forEach((element) => {
+//     if(element.length > 6){
+//         resultArray.push(element)
+//     }
+// })
+
+// console.log(resultArray) //(1) ['exuberant']
+
+// 1: Write a function areAllPositive that accepts an array of numbers 
+// and returns true if every number in the array is positive, and false otherwise.
+
+// arr = [-1, 2, 3, 4 -3]
+// arr = [0, 0, 0, 3]
+arr = [1, 9, 34]
+
+ 
+   let areAllPositive = arr.every(element => element > 0)
+
+
+console.log(areAllPositive) // false for [-1, 2, 3, 4 -3]
+console.log(areAllPositive) //false for [0, 0, 0, 3]
+console.log(areAllPositive) //true for arr = [1, 9, 34]

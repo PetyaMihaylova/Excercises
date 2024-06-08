@@ -73,10 +73,48 @@
 
 // solve(arr)
 
-const arr = ['1', '2', '3', '4']
-const arr1 = ['5', '6', '7', '8']
-console.log(arr + arr1) //1,2,3,45,6,7,8 //if u just use the + sign, where the arrays meet, u are gonna have a concatenation instead
-console.log(arr + ',' + arr1) //1,2,3,4,5,6,7,8 //this is a string
-console.log(typeof(arr+arr1)) //string
-console.log(arr.concat(arr1)) // (8) ['1', '2', '3', '4', '5', '6', '7', '8']
+// const arr = ['1', '2', '3', '4']
+// const arr1 = ['5', '6', '7', '8']
+// console.log(arr + arr1) //1,2,3,45,6,7,8 //if u just use the + sign, where the arrays meet, u are gonna have a concatenation instead
+// console.log(arr + ',' + arr1) //1,2,3,4,5,6,7,8 //this is a string
+// console.log(typeof(arr+arr1)) //string
+// console.log(arr.concat(arr1)) // (8) ['1', '2', '3', '4', '5', '6', '7', '8']
 //the arr.concat() method returns an array
+// const arr2 = arr.concat(arr1)
+// const arr3 = ['9', '10', '11', '12']
+// const arr4 = arr.concat('!', arr1, arr2)
+// console.log(arr4)
+
+// const arr = [1, 2, 3, 4]
+// let result = false
+// arr.forEach((element) => {
+//     if(element < 5) {
+//         result = true
+//     } else{
+//         result = false
+//         return;
+//     }
+// })
+// console.log(result)   //true - however, the result is wrong. Luckily, there
+//is a way out if this with a method on the array - ar.every()
+
+// let result = false
+// arr.every((element) => {
+//     if(element < 5) {
+//         result = true
+//     } else{
+//         result = false
+//         return;
+//     }
+// })
+
+// console.log(result) //false
+
+// const result1 = arr.every((number, index, array) => {number < 5})
+
+const arr = [1, 2, 3, 4]
+// let result = arr.every(number => number < 5) 
+// console.log(result) //true
+let result = arr.every(number => typeof number === 'number' && number <5) 
+console.log(result) //true 
+

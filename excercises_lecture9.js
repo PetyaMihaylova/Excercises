@@ -112,11 +112,23 @@
 
 // const result1 = arr.every((number, index, array) => {number < 5})
 
-const arr = [1, 2, 3, 4]
+// const arr = [1, 2, 3, 4]
 // let result = arr.every(number => number < 5) 
 // console.log(result) //true
 // let result = arr.every(number => typeof number === 'number' && number <5) 
 // console.log(result) //true 
-let result = arr.some(element => typeof element === 'number')
-console.log(result) //true
+// let result = arr.some(element => typeof element === 'number')
+// console.log(result) //true
+// let result = arr.some(element => element > 1)
+// console.log(result) //true
 
+// const result = arr.fill('!', 0, 2)
+// console.log(result) //(4) ['!', '!', 3, 4]
+// const result = arr.fill('!')
+// console.log(result) //(4) ['!', '!', '!', '!']
+// const result = arr.fill('!', 2)
+// console.log(result) //(4) [1, 2, '!', '!']
+
+const arr = ['spray', 'elite', 'exuberant', 'cat', 'beer', 'dog', 'coffee']
+const result = arr.filter() //arr.filter works like all other methods with a callback function, which will be run for each and every one of the elements
+console.log(result)

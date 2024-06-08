@@ -151,12 +151,33 @@
 
 // arr = [-1, 2, 3, 4 -3]
 // arr = [0, 0, 0, 3]
-arr = [1, 9, 34]
+// arr = [1, 9, 34]
 
  
-   let areAllPositive = arr.every(element => element > 0)
+//    let areAllPositive = arr.every(element => element > 0)
 
 
-console.log(areAllPositive) // false for [-1, 2, 3, 4 -3]
-console.log(areAllPositive) //false for [0, 0, 0, 3]
-console.log(areAllPositive) //true for arr = [1, 9, 34]
+// console.log(areAllPositive) // false for [-1, 2, 3, 4 -3]
+// console.log(areAllPositive) //false for [0, 0, 0, 3]
+// console.log(areAllPositive) //true for arr = [1, 9, 34]
+
+//----------------------------------
+// 2: Write a function containsNegative that accepts an array of numbers and returns true
+//  if there is at least one negative number in the array, and false otherwise.
+
+//  arr = [-1, 2, 3, 4 -3]
+// arr = [0, 0, 0, 3]
+// arr = [1, 9, 34]
+
+//  let containsNegative = arr.some(element => element < 0)
+//  console.log(containsNegative) //true for arr = [-1, 2, 3, 4 -3]
+//  console.log(containsNegative) //false for arr = [0, 0, 0, 3]
+//  console.log(containsNegative) //false
+ //---------------------------------------
+
+//  3: Write a function filterNonPositive that accepts an array of numbers and returns 
+//  a new array containing only the non-positive numbers (i.e., numbers that are zero or negative).
+// arr = [-1, 2, 3, 4, -3, 0]
+
+//  let filterNonPositive = arr.filter(element => element <=0)
+//  console.log(filterNonPositive) //(3) [-1, -3, 0] for arr = [-1, 2, 3, 4, -3, 0]

@@ -160,6 +160,14 @@
 // console.log(areAllPositive) // false for [-1, 2, 3, 4 -3]
 // console.log(areAllPositive) //false for [0, 0, 0, 3]
 // console.log(areAllPositive) //true for arr = [1, 9, 34]
+//----------------------------------------
+
+const solve = (arr) => {
+const result = arr.every(number => number > 0)
+console.log(result);
+}
+
+solve([1, 2, 3, 4, 5, 6]) //true
 
 //----------------------------------
 // 2: Write a function containsNegative that accepts an array of numbers and returns true

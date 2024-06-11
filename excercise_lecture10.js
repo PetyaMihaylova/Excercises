@@ -127,13 +127,25 @@ const arr = [1, 2, 3, 4]
 //array.reduceRight() method performs the callback function from right-to-left
 
 const animals = ['ant', 'bison', 'camel', 'duck', 'elephant']
-const newArray = animals.slice()
-console.log(newArray) //(5) ['ant', 'bison', 'camel', 'duck', 'elephant']
-newArray[5] = 'marygold'
-console.log(animals)// (5) ['ant', 'bison', 'camel', 'duck', 'elephant']
+// const newArray = animals.slice()
+// console.log(newArray) //(5) ['ant', 'bison', 'camel', 'duck', 'elephant']
+// newArray[5] = 'marygold'
+// console.log(animals)// (5) ['ant', 'bison', 'camel', 'duck', 'elephant']
 
 //arr.slice() without any parameters renders a copy of the Array, but just a shallow copy.
 //This means that if we assign the result of the method to a constant, 
 //like const newArray = animals.slice(), if we amend newArray to contain an additional element in its 
 //values, e.g. 'marygold', the original array animals would still not contain this element
 //because with shallow copies, we cannot touch the reference
+
+// console.log(animals === newArray) //false// this means that the two arrays are not equivalent
+//because of the levels of copying, we have original copy === shallow copy 
+//and the answer of course is false
+
+const newArray = animals.slice(2) //this cuts a piece of the array from index 2 until the end
+console.log(newArray) //(3) ['camel', 'duck', 'elephant']
+const newArray1 = animals.slice(2, 4)
+console.log(newArray1)// (2) ['camel', 'duck'] - here, we are cutting that,
+//which stays between index 2 and index4
+
+//arr.slice(begIndex, endIndex) allows us to cut the array

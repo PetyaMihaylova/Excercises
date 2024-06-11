@@ -75,6 +75,23 @@
 // )
 // console.log(arr2)
 
+// const arr = [1, 2, 3, 4]
+// const index = arr.findIndex((element, index, arr) => (element < 4))
+// console.log(index) // 0 //arr.findIndex - finds the first index that corresponds to the predicate/condition, given with a callback function
+// const index1 = arr.findIndex((element, index, arr) => (element < 0))
+// console.log(index1) //-1
+// const index2 = arr.findIndex((element, index, arr) => (element > 2))
+// console.log(index2) //2
+// console.log(arr[index2]) //3
+// console.log(arr[index]) //1
+// console.log(arr[index1]) //undefined
+// console.log(arr[-1]) //undefined
+
 const arr = [1, 2, 3, 4]
-const index = arr.findIndex((element, index, arr) => (element < 4))
-console.log(index) // arr.findIndex - finds the first index that corresponds to the predicate/condition, given with a callback function
+// const2= arr.findLastIndex(element => element>1)
+// console.log(const2) //3
+// const3= arr.findLastIndex(element => element<5)
+// console.log(const3) //3
+
+//arr.findLastIndex() method finds the last index that complies with the predicate
+//arr.findLast() method finds the last element that complies with the predicate

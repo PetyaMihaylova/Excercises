@@ -87,7 +87,7 @@
 // console.log(arr[index1]) //undefined
 // console.log(arr[-1]) //undefined
 
-const arr = [1, 2, 3, 4]
+// const arr = [1, 2, 3, 4]
 // const2= arr.findLastIndex(element => element>1)
 // console.log(const2) //3
 // const3= arr.findLastIndex(element => element<5)
@@ -95,3 +95,16 @@ const arr = [1, 2, 3, 4]
 
 //arr.findLastIndex() method finds the last index that complies with the predicate
 //arr.findLast() method finds the last element that complies with the predicate
+// const2 = arr.findLastIndex(element => element <3)
+// console.log(const2)//1
+// arr[1] = 8
+// console.log(arr) //[1, 8, 3, 4]
+
+//If you have to change an element in an array, find its index first.
+//By knowing its index, you can then change its element.
+
+//We have the task to sum all elements in the array.
+const arr = [1, 2, 3, 4]
+let result = 0
+arr.forEach(element => result += element)
+console.log(result) //10

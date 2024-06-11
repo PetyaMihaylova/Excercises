@@ -120,8 +120,20 @@ const arr = [1, 2, 3, 4]
 // const result = arr.reduce((accumulator, currentNumber) => {accumulator+currentNumber}, [])
 // console.log(result)
 
-const array = [[0, 1], [2, 3], [4, 5]]
-const result = array.reduce((accumulator, element) => accumulator.concat(element))
-console.log(result)// [0, 1, 2, 3, 4, 5]
-const result2 = array.reduceRight((accumulator, element) => accumulator.concat(element))// (6) [0, 1, 2, 3, 4, 5]
+// const array = [[0, 1], [2, 3], [4, 5]]
+// const result = array.reduce((accumulator, element) => accumulator.concat(element))
+// console.log(result)// [0, 1, 2, 3, 4, 5]
+// const result2 = array.reduceRight((accumulator, element) => accumulator.concat(element))// (6) [0, 1, 2, 3, 4, 5]
+//array.reduceRight() method performs the callback function from right-to-left
 
+const animals = ['ant', 'bison', 'camel', 'duck', 'elephant']
+const newArray = animals.slice()
+console.log(newArray) //(5) ['ant', 'bison', 'camel', 'duck', 'elephant']
+newArray[5] = 'marygold'
+console.log(animals)// (5) ['ant', 'bison', 'camel', 'duck', 'elephant']
+
+//arr.slice() without any parameters renders a copy of the Array, but just a shallow copy.
+//This means that if we assign the result of the method to a constant, 
+//like const newArray = animals.slice(), if we amend newArray to contain an additional element in its 
+//values, e.g. 'marygold', the original array animals would still not contain this element
+//because with shallow copies, we cannot touch the reference

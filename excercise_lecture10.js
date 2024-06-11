@@ -105,6 +105,23 @@
 
 //We have the task to sum all elements in the array.
 const arr = [1, 2, 3, 4]
-let result = 0
-arr.forEach(element => result += element)
-console.log(result) //10
+// let result = 0
+// arr.forEach(element => result += element)
+// console.log(result) //10
+
+//we can also use the arr.reduce()method to sum up all elements in the array
+//arr.reduce(() => {}, beginningAccumValue) uses a callback function to run on each individual element, as well as the beginning value of our accumulator
+// const result = arr.reduce((accumulator, currentNumber) => accumulator+currentNumber, 0)
+// console.log(result) //10
+// const result = arr.reduce((accumulator, currentNumber) => accumulator-currentNumber, 0)
+// console.log(result)// -10
+
+//we can give an empty array to be the accumulator and to accumulate upon it
+// const result = arr.reduce((accumulator, currentNumber) => {accumulator+currentNumber}, [])
+// console.log(result)
+
+const array = [[0, 1], [2, 3], [4, 5]]
+const result = array.reduce((accumulator, element) => accumulator.concat(element))
+console.log(result)// [0, 1, 2, 3, 4, 5]
+const result2 = array.reduceRight((accumulator, element) => accumulator.concat(element))// (6) [0, 1, 2, 3, 4, 5]
+

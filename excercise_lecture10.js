@@ -142,10 +142,20 @@ const animals = ['ant', 'bison', 'camel', 'duck', 'elephant']
 //because of the levels of copying, we have original copy === shallow copy 
 //and the answer of course is false
 
-const newArray = animals.slice(2) //this cuts a piece of the array from index 2 until the end
-console.log(newArray) //(3) ['camel', 'duck', 'elephant']
-const newArray1 = animals.slice(2, 4)
-console.log(newArray1)// (2) ['camel', 'duck'] - here, we are cutting that,
+// const newArray = animals.slice(2) //this cuts a piece of the array from index 2 until the end
+// console.log(newArray) //(3) ['camel', 'duck', 'elephant']
+// const newArray1 = animals.slice(2, 4)
+// console.log(newArray1)// (2) ['camel', 'duck'] - here, we are cutting that,
 //which stays between index 2 and index4
 
 //arr.slice(begIndex, endIndex) allows us to cut the array
+//arr.splice allows us to cut a piece of the array and replace it with something else
+
+const months = ['Jan', 'March', 'April', 'June']
+ months.splice(1, 0, 'Feb')
+console.log(months) //(5) ['Jan', 'Feb', 'March', 'April', 'June']
+months.splice(4, 0, 'May')
+console.log(months) //(6) ['Jan', 'Feb', 'March', 'April', 'May', 'June']
+months.splice(5, 1, 'We replaced June')
+console.log(months) //(6) ['Jan', 'Feb', 'March', 'April', 'May', 'We replaced June']
+//arr.splice() method does not return a result, but mutates the original array

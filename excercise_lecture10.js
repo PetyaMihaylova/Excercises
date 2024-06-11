@@ -56,10 +56,25 @@
     //In JavaScript, the objects and arrays are saved in a specific way,
     //which is different from the way everything else is saved.
 
-    arr = [1, 2, 3, 4]
-    // const arr2 = [...arr]
-    const arr2 = JSON.parse(JSON.stringify(arr))
-    //arr2 = ref1
-    arr2[4] = 5
-    console.log(arr2) //(5) [1, 2, 3, 4, 5]
-    console.log(arr) //(5) [1, 2, 3, 4]
+//     arr = [1, 2, 3, 4]
+//     // const arr2 = [...arr]
+//     // const arr2 = JSON.parse(JSON.stringify(arr))
+//     //arr2 = ref1
+//     // arr2[4] = 5
+//     // console.log(arr2) //(5) [1, 2, 3, 4, 5]
+//     // console.log(arr) //(5) [1, 2, 3, 4]
+
+//     //with const2 = [...arr] or JSON.parse(JSON.stringify(arr)) we break the relationship with the reference 
+
+//     let isTrue = []
+//     const arr2 = arr.every(element => {if (element > 5)
+//         {isTrue.push(true)
+//         }else {isTrue.push(false)}}
+
+        
+// )
+// console.log(arr2)
+
+const arr = [1, 2, 3, 4]
+const index = arr.findIndex((element, index, arr) => (element < 4))
+console.log(index) // arr.findIndex - finds the first index that corresponds to the predicate/condition, given with a callback function

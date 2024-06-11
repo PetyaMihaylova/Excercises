@@ -57,7 +57,8 @@
     //which is different from the way everything else is saved.
 
     arr = [1, 2, 3, 4]
-    const arr2 = [...arr]
+    // const arr2 = [...arr]
+    const arr2 = JSON.parse(JSON.stringify(arr))
     //arr2 = ref1
     arr2[4] = 5
     console.log(arr2) //(5) [1, 2, 3, 4, 5]

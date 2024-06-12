@@ -198,21 +198,32 @@ const animals = ['ant', 'bison', 'camel', 'duck', 'elephant']
 // console.log(Array.isArray(arr)) //true
 // console.log(arr[0]) //a
 
-const obj = {
-    0:1,
-    1:2,
-    2:3,
-    3:4,
-    4:5
+// const obj = {
+//     0:1,
+//     1:2,
+//     2:3,
+//     3:4,
+//     4:5
 
-}
+// }
 
-console.log(obj[0]) //1
-console.log(obj['0']) //1
+// console.log(obj[0]) //1
+// console.log(obj['0']) //1
 
 //Array is a kind of object, all arrays are objects, but not all 
 //objects are arrays. Arrays guarantee us that the keys(that is,
 // the indices, will always be arranged in ascending order starting
 //from 0 and they would always be numbers. Arrays have all array methods
-//and array.length, and the objects do not have that)
+//and array.length, and the objects do not have that). The array keys are strings.
+
+const Obj = {
+    'mama': 'nice way to call ur mom',
+    'papa': 'nice way to call ur dad',
+    solve: () => console.log('method'),
+}
+
+console.log(Obj['mama']) // nice way to call ur mom
+console.log(Obj.mama)  // nice way to call ur mom
+Obj.solve() //method
+
 

@@ -164,10 +164,25 @@ const animals = ['ant', 'bison', 'camel', 'duck', 'elephant']
 
 //In a given array, find all the even numbers, multiply them by 2 and find out the sum of all numbers in the array
 
-const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-const evenNum = arr.filter(element => element %2 === 0)
-console.log(evenNum) //(5) [2, 4, 6, 8, 10]
-const multBy2 = evenNum.map(element => element*2)
-console.log(multBy2) //(5) [4, 8, 12, 16, 20]
-const arrSum = multBy2.reduce((accumulator, currentNum) => accumulator + currentNum)
-console.log(arrSum) //60
+// const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+// const evenNum = arr.filter(element => element %2 === 0)
+// console.log(evenNum) //(5) [2, 4, 6, 8, 10]
+// const multBy2 = evenNum.map(element => element*2)
+// console.log(multBy2) //(5) [4, 8, 12, 16, 20]
+// const arrSum = multBy2.reduce((accumulator, currentNum) => accumulator + currentNum, 0)
+// console.log(arrSum) //60
+
+const arr = [5, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 100]
+// const result = arr
+// .filter(element => element % 2 === 0)
+// .map(element => element*2)
+// .reduce((accum, currentVal) => accum + currentVal, 0)
+// console.log(result) //60
+arr.sort()
+console.log(arr) //applying arr.sort() without any parameters does not give us 
+//well-displayed logical results - (11) [1, 10, 100, 2, 3, 4, 5, 5, 6, 7, 8, 9]
+arr.sort(a,b => a-b) //sorting in ascending order
+arr.sort(a, b => b-a) //sorting in descending order
+
+
+

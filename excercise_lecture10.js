@@ -172,17 +172,47 @@ const animals = ['ant', 'bison', 'camel', 'duck', 'elephant']
 // const arrSum = multBy2.reduce((accumulator, currentNum) => accumulator + currentNum, 0)
 // console.log(arrSum) //60
 
-const arr = [5, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 100]
+// const arr = [5, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 100]
 // const result = arr
 // .filter(element => element % 2 === 0)
 // .map(element => element*2)
 // .reduce((accum, currentVal) => accum + currentVal, 0)
 // console.log(result) //60
-arr.sort()
-console.log(arr) //applying arr.sort() without any parameters does not give us 
+// arr.sort()
+// console.log(arr) //applying arr.sort() without any parameters does not give us 
 //well-displayed logical results - (11) [1, 10, 100, 2, 3, 4, 5, 5, 6, 7, 8, 9]
-arr.sort(a,b => a-b) //sorting in ascending order
-arr.sort(a, b => b-a) //sorting in descending order
+// arr.sort(a,b => a-b) //sorting in ascending order
+// arr.sort(a, b => b-a) //sorting in descending order
 
+// const arr = ['a','j', 'k', 'b', 'c', 'd']
+// const arr1 = ['A','a','j', 'K', 'b', 'c', 'd']
+// arr.sort(a, b => b-a) //we will not receive any result with this notation, because this approach is for numbers
+// const alphaBet= arr.sort((a, b) => a.localeCompare(b)) //this is how we sort by alphabetical order
+// console.log(arr) //(6) ['a', 'b', 'c', 'd', 'j', 'k']
+// const reverseAlphaBet = arr.sort((a, b) => b.localeCompare(a)) //this is how we sort by reverse-alphabetical order
 
+// arr1.sort((a, b) => a.localeCompare(b), 'en') //(6) ['A', 'a', 'b', 'c', 'd', 'j', 'K']
+// console.log(arr) //(6) ['k', 'j', 'd', 'c', 'b', 'a']
+// console.log(arr1)
+// console.log(typeof arr) //object
+// console.log(Array.isArray(arr)) //true
+// console.log(arr[0]) //a
+
+const obj = {
+    0:1,
+    1:2,
+    2:3,
+    3:4,
+    4:5
+
+}
+
+console.log(obj[0]) //1
+console.log(obj['0']) //1
+
+//Array is a kind of object, all arrays are objects, but not all 
+//objects are arrays. Arrays guarantee us that the keys(that is,
+// the indices, will always be arranged in ascending order starting
+//from 0 and they would always be numbers. Arrays have all array methods
+//and array.length, and the objects do not have that)
 

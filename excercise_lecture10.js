@@ -104,7 +104,7 @@
 //By knowing its index, you can then change its element.
 
 //We have the task to sum all elements in the array.
-const arr = [1, 2, 3, 4]
+// const arr = [1, 2, 3, 4]
 // let result = 0
 // arr.forEach(element => result += element)
 // console.log(result) //10
@@ -151,11 +151,23 @@ const animals = ['ant', 'bison', 'camel', 'duck', 'elephant']
 //arr.slice(begIndex, endIndex) allows us to cut the array
 //arr.splice allows us to cut a piece of the array and replace it with something else
 
-const months = ['Jan', 'March', 'April', 'June']
- months.splice(1, 0, 'Feb')
-console.log(months) //(5) ['Jan', 'Feb', 'March', 'April', 'June']
-months.splice(4, 0, 'May')
-console.log(months) //(6) ['Jan', 'Feb', 'March', 'April', 'May', 'June']
-months.splice(5, 1, 'We replaced June')
-console.log(months) //(6) ['Jan', 'Feb', 'March', 'April', 'May', 'We replaced June']
-//arr.splice() method does not return a result, but mutates the original array
+// const months = ['Jan', 'March', 'April', 'June']
+//  months.splice(1, 0, 'Feb')
+// console.log(months) //(5) ['Jan', 'Feb', 'March', 'April', 'June']
+// months.splice(4, 0, 'May')
+// console.log(months) //(6) ['Jan', 'Feb', 'March', 'April', 'May', 'June']
+// months.splice(5, 1, 'We replaced June')
+// console.log(months) //(6) ['Jan', 'Feb', 'March', 'April', 'May', 'We replaced June']
+// //arr.splice() method does not return a result, but mutates the original array
+// months.splice(0, 2, 'M')
+// console.log(months)
+
+//In a given array, find all the even numbers, multiply them by 2 and find out the sum of all numbers in the array
+
+const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+const evenNum = arr.filter(element => element %2 === 0)
+console.log(evenNum) //(5) [2, 4, 6, 8, 10]
+const multBy2 = evenNum.map(element => element*2)
+console.log(multBy2) //(5) [4, 8, 12, 16, 20]
+const arrSum = multBy2.reduce((accumulator, currentNum) => accumulator + currentNum)
+console.log(arrSum) //60

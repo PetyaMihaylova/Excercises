@@ -24,10 +24,62 @@ const user = {
     city: 'Sofia',
     level: 4,
     family: [{name: 'Polya', role: 'mother'}, {name: 'Dancho', role: 'father'}],
+    salary: 2000,
     }
 
-console.log(user.family) //(2) [{…}, {…}] //for a value in a key, we can have an array of objects
-console.log(user.family.find((member) => member.role === 'mother'))// {name: 'Polya', role: 'mother'}
+let user2 = {
+        name_first: 'Mitko',
+        email: 'mitko@abv.bg',
+        age: 24,
+        city: 'Sofia',
+        level: 4,
+        family: [{name: 'Polya', role: 'mother'}, {name: 'Dancho', role: 'father'}],
+        }
+
+
+const extraInfo = {
+    profession: 'dancer',
+    salary: 1800,
+
+}
+
+
+
+
+// extraInfo.salary = 2000
+// console.log(extraInfo.salary)// 2000
+
+// const result = Object.assign(user, extraInfo) //in arrays, to join two arrays, we use the .concat()
+//method. In objects,  to join two objects, we use the Object.assign(object1, object2)
+// console.log(result) //{name_first: 'Mitko', email: 'mitko@abv.bg', age: 24, city: 'Sofia', level: 4, …}
+// console.log(result.salary) //1800
+// console.log(result.salary) //2000
+// newUserName = 'Grisho'
+// const newUserObject = {...user, ...extraInfo, name_first: newUserName}
+// const newUserObject = JSON.parse(JSON.stringify(user))// this is how we break the original reference relationship between user and newUserObject
+
+// user.family[0].name = 'Violeta'
+// console.log(user.family[0].name, newUserObject.family[0].name)
+// user.age = 34
+// console.log(user.age, newUserObject.age) //34 24
+// console.log(newUserObject.name_first) //Grisho
+
+//console.log(user === user2) //false - even though both objects have identical content, they are not
+//equivalent to each other, because with objects, the same principle as arrays apply: they are 
+//stored in the computer memory in a way that is different from how strings and numbers are stored.
+//objects are stored with their reference, so user has ref1 and user2 has ref2, which are two different references.
+//In this case, user2 is a shallow copy of user, because only the content is equivalent, but not the references
+// user.asd = 'asd'
+// console.log(user2.asd)// asd
+
+// user2 = user
+// console.log(user === user2) //true , after we declare both objects to be eqivalent to each other by
+//rewriting the variable, user2 is now a deep copy of user
+
+
+
+// console.log(user.family) //(2) [{…}, {…}] //for a value in a key, we can have an array of objects
+// console.log(user.family.find((member) => member.role === 'mother'))// {name: 'Polya', role: 'mother'}
 
 // const key = 'name_first'
 // console.log(user.name_first) //Mitko
@@ -37,11 +89,11 @@ console.log(user.family.find((member) => member.role === 'mother'))// {name: 'Po
 // console.log(user[key])
 
 
-for (property in user){
-    console.log(property
+// for (property in user){
+//     console.log(property
 
-    )
-}
+//     )
+// }
 // name_first
 // email
 // age
@@ -53,18 +105,18 @@ for (property in user){
 //     console.log(key)
 // }
 
-for (let property of user.family){
-    console.log(property
+// for (let property of user.family){
+//     console.log(property
 
-    )} //{name: 'Polya', role: 'mother'}
+//     )} //{name: 'Polya', role: 'mother'}
     // {name: 'Dancho', role: 'father'} //this is the for of loop in arrays
 
     //in arrays, we have for of loop
     //in objects, we have for in loop
 
-for(property in user){
-    console.log(user[property])
-} //
+// for(property in user){
+//     console.log(user[property])
+// } //
 // Mitko
 // mitko@abv.bg
 // 24
@@ -72,14 +124,37 @@ for(property in user){
 // 4
 // (2) [{…}, {…}]
 
-for(property in user){
-    console.log(property === 'name_first', property)
-} // true name_first
+// for(property in user){
+//     console.log(property === 'name_first', property)
+// } // true name_first
 // false email
 // false age
 // false city
 // false level
 // false family
 
-Object.hasOwn(user, 'level') //to check, whether an object has a certain property/key, 
-//we can use a method on the global Object, namely Object.hasOwn(arr_name, 'property_name')
+// const result = Object.hasOwn(user, 'level') //to check, whether an object has a certain property/key, 
+// //we can use a method on the global Object, namely Object.hasOwn(arr_name, 'property_name')
+// console.log(result) //true
+// const result1 = Object.hasOwn(user, 'level12')
+// console.log(result1) //false
+
+//With deconstruction, e.g. {...user, ...extraInfo}, we make shallow copies of the objects
+//user.family also has a reference, and when we deoncstruct user into a new object NewUserObject,
+//we pour its content into the new object. Part of this content is the array family, which gets copied
+//together with its original reference into the NewUserObject. In this case, when we change
+//a property value into the original object user's family array, the property value of
+//NewUserObject's family array will also be changed (because we are dealing with changing one 
+ //and the same reference, not two separate references).
+
+ const arr = [1, 2, 3]
+ const arr2 = [4, 5, 6]
+ console.log(arr.concat(arr2)) //(6) [1, 2, 3, 4, 5, 6]
+ console.log([...arr, ...arr2]) //6) [1, 2, 3, 4, 5, 6]
+ console.log([...arr, ...arr2, 7]) //(7) [1, 2, 3, 4, 5, 6, 7]
+
+ //this method transforms the object into an array of strings
+ console.log(Object.keys(user)) //(7) ['name_first', 'email', 'age', 'city', 'level', 'family', 'salary']
+
+ //this method, in turn, transforms an object into an array of values
+ console.log(Object.values(user))

@@ -239,14 +239,26 @@ const extraInfo = {
 
 //with the method ObjectfromEntries(arrayOfArrays) we turn the array again into an object
 
-const name = 'Grigor'
-const age = 24
-const profession = 'Dancer'
+// const name = 'Grigor'
+// const age = 24
+// const profession = 'Dancer'
 
-const obj = {
-    name: name,
-    age: age,
-    profession: profession
-}
+// const obj = {
+//     name: name,
+//     age: age,
+//     profession: profession
+//} //here the variable name is the same as the key name. if we have such overlap, that is, the variable
+//name being the same as the key name, we can leave only one name as follows:)
 
-console.log(obj) //{name: 'Grigor', age: 24, profession: 'Dancer'}
+// const obj = {
+//     name,
+//    old: age,
+//     profession
+// } 
+
+// console.log(obj) //{name: 'Grigor', age: 24, profession: 'Dancer'} 
+
+console.log(user);
+Object.freeze(user)
+delete user.age    //{name_first: 'Mitko', email: 'mitko@abv.bg', age: 24, city: 'Sofia', level: 4, …}
+console.log(Object.isFrozen(user)) //here we can check if an object is frozen with the method Object.isFrozen(user)

@@ -147,14 +147,106 @@ const extraInfo = {
 //NewUserObject's family array will also be changed (because we are dealing with changing one 
  //and the same reference, not two separate references).
 
- const arr = [1, 2, 3]
- const arr2 = [4, 5, 6]
- console.log(arr.concat(arr2)) //(6) [1, 2, 3, 4, 5, 6]
- console.log([...arr, ...arr2]) //6) [1, 2, 3, 4, 5, 6]
- console.log([...arr, ...arr2, 7]) //(7) [1, 2, 3, 4, 5, 6, 7]
+//  const arr = [1, 2, 3]
+//  const arr2 = [4, 5, 6]
+//  console.log(arr.concat(arr2)) //(6) [1, 2, 3, 4, 5, 6]
+//  console.log([...arr, ...arr2]) //6) [1, 2, 3, 4, 5, 6]
+//  console.log([...arr, ...arr2, 7]) //(7) [1, 2, 3, 4, 5, 6, 7]
 
  //this method transforms the object into an array of strings
- console.log(Object.keys(user)) //(7) ['name_first', 'email', 'age', 'city', 'level', 'family', 'salary']
+//  console.log(Object.keys(user)) //(7) ['name_first', 'email', 'age', 'city', 'level', 'family', 'salary']
 
  //this method, in turn, transforms an object into an array of values
- console.log(Object.values(user))
+//  console.log(Object.values(user)) //['Mitko', 'mitko@abv.bg', 24, 'Sofia', 4, Array(2), 2000]
+
+
+ //this method transforms an object into an array of sub-arrays. Each sub-array consists of key at index 0 and value at index1.
+//  console.log(Object.entries(user))//(7) [Array(2), Array(2), Array(2), Array(2), Array(2), Array(2), Array(2)]
+
+//  const arr = ['a', 'b']
+//  const a = arr[0]
+//  const b = arr[1]
+ //console.log(a, b) //a b
+//  const [a, b, c] = ['a', 'b', 'c']
+//  
+//  const [first, second, third] = ['a', 'b', 'c']
+//  console.log(third)
+
+// const {first, second, third,} = { a: 'a', b: 'b', c:'c'}// here, we declare 3 separate objects
+// console.log(first, second, third)// undefined undefined undefined
+// arr=[1,2,3]
+// console.log(arr);
+
+// for(property in user){
+//     console.log(`${property} : ${user[property]}`);
+// } //name_first : Mitko
+// email : mitko@abv.bg
+// age : 24
+// city : Sofia
+// level : 4
+// family : [object Object],[object Object]
+// salary : 2000
+
+// for(property in user){
+//     console.log(`${property} : ${user.property}`);
+// } //name_first : Mitko
+// email : mitko@abv.bg
+// age : 24
+// city : Sofia
+// level : 4
+// family : [object Object],[object Object]
+// salary : 2000
+
+// for(property in user.family){
+//     console.log(Object.entries(user));
+// }
+
+// for(currentArray of Object.entries(user)){
+//     console.log(currentArray) //(2) ['name_first', 'Mitko']
+    // (2) ['email', 'mitko@abv.bg']
+    // (2) ['age', 24]
+    // (2) ['city', 'Sofia']
+    // (2) ['level', 4]
+    // (2) ['family', Array(2)]
+    // (2) ['salary', 2000]
+// }
+
+// for(currentArray of Object.entries(user)) {
+//     console.log(`${currentArray[0]} : ${currentArray[1]}`)
+//} //email : mitko@abv.bg
+// age : 24
+// city : Sofia
+// level : 4
+// family : [object Object],[object Object]
+// salary : 2000
+
+// for(const[key, value] of Object.entries(user)){
+//     console.log(`${key}, ${value}`)
+//} //email : mitko@abv.bg
+// age : 24
+// city : Sofia
+// level : 4
+// family : [object Object],[object Object]
+// salary : 2000
+
+// const arrayOfArrays = Object.entries(user)
+// console.log(arrayOfArrays); //(7) [Array(2), Array(2), Array(2), Array(2), Array(2), Array(2), Array(2)]
+
+// const entriesArray = [['name_first', 'Grigor'], ['age', 24], ['city', 'Sofia'], ['street', 'Nishava']]
+// console.log(Object.fromEntries(entriesArray)) //{name_first: 'Grigor', age: 24, city: 'Sofia', street: 'Nishava'}
+// const arrayOfArrays = Object.entries(user)
+// console.log(Object.fromEntries(arrayOfArrays)); //{name_first: 'Mitko', email: 'mitko@abv.bg', age: 24, city: 'Sofia', level: 4, …}
+
+//with the method ObjectfromEntries(arrayOfArrays) we turn the array again into an object
+
+const name = 'Grigor'
+const age = 24
+const profession = 'Dancer'
+
+const obj = {
+    name: name,
+    age: age,
+    profession: profession
+}
+
+console.log(obj) //{name: 'Grigor', age: 24, profession: 'Dancer'}

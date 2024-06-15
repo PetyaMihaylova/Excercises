@@ -17,31 +17,31 @@
 // console.log(user.name) //Shishman
 // console.log(user['name']) //Shishman // this is another way of reaching inside the object by giving the key as an index
 
-const user = {
-    name_first: 'Mitko',
-    email: 'mitko@abv.bg',
-    age: 24,
-    city: 'Sofia',
-    level: 4,
-    family: [{name: 'Polya', role: 'mother'}, {name: 'Dancho', role: 'father'}],
-    salary: 2000,
-    }
+// const user = {
+//     name_first: 'Mitko',
+//     email: 'mitko@abv.bg',
+//     age: 24,
+//     city: 'Sofia',
+//     level: 4,
+//     family: [{name: 'Polya', role: 'mother'}, {name: 'Dancho', role: 'father'}],
+//     salary: 2000,
+//     }
 
-let user2 = {
-        name_first: 'Mitko',
-        email: 'mitko@abv.bg',
-        age: 24,
-        city: 'Sofia',
-        level: 4,
-        family: [{name: 'Polya', role: 'mother'}, {name: 'Dancho', role: 'father'}],
-        }
+// let user2 = {
+//         name_first: 'Mitko',
+//         email: 'mitko@abv.bg',
+//         age: 24,
+//         city: 'Sofia',
+//         level: 4,
+//         family: [{name: 'Polya', role: 'mother'}, {name: 'Dancho', role: 'father'}],
+//         }
 
 
-const extraInfo = {
-    profession: 'dancer',
-    salary: 1800,
+// const extraInfo = {
+//     profession: 'dancer',
+//     salary: 1800,
 
-}
+// }
 
 
 
@@ -154,7 +154,7 @@ const extraInfo = {
 //  console.log([...arr, ...arr2, 7]) //(7) [1, 2, 3, 4, 5, 6, 7]
 
  //this method transforms the object into an array of strings
-//  console.log(Object.keys(user)) //(7) ['name_first', 'email', 'age', 'city', 'level', 'family', 'salary']
+//  console.log(Object.(user)) //(7) ['name_first', 'email', 'age', 'city', 'level', 'family', 'salary']
 
  //this method, in turn, transforms an object into an array of values
 //  console.log(Object.values(user)) //['Mitko', 'mitko@abv.bg', 24, 'Sofia', 4, Array(2), 2000]
@@ -258,11 +258,97 @@ const extraInfo = {
 
 // console.log(obj) //{name: 'Grigor', age: 24, profession: 'Dancer'} 
 
-console.log(user);
+//console.log(user);
 // Object.freeze(user)
-Object.preventExtensions(user) //with Object.preventExtensions() method we just forbid the adding of properties, but the deletion is allowed
-delete user.age    //{name_first: 'Mitko', email: 'mitko@abv.bg', age: 24, city: 'Sofia', level: 4, …}
-user.age = 33
-console.log(Object.isFrozen(user)) //here we can check if an object is frozen with the method Object.isFrozen(user)//true
-console.log(Object.isExtensible(user)) //false //this is a method to check if we have applied the Object.preventExtensions() method
+// Object.preventExtensions(user) //with Object.preventExtensions() method we just forbid the adding of properties, but the deletion is allowed
+// delete user.age    //{name_first: 'Mitko', email: 'mitko@abv.bg', age: 24, city: 'Sofia', level: 4, …}
+// user.age = 33
+// console.log(Object.isFrozen(user)) //here we can check if an object is frozen with the method Object.isFrozen(user)//true
+// console.log(Object.isExtensible(user)) //false //this is a method to check if we have applied the Object.preventExtensions() method
 //Object. seal() allows modifications, but prevents additions and deletions of properties.
+
+// const inventory = [
+//     {name: 'asparagus', type: 'vegetables', quantity: 5},
+//     {name: 'bananas', type: 'fruits', quantity: 0},
+//     {name: 'goat', type: 'meat', quantity: 23},
+//     {name: 'cherries', type: 'fruits', quantity: 5},
+//     {name: 'fish', type: 'meat', quantity: 22},
+// ]
+
+// const result = Object.groupBy(inventory, ({type}) => {type})
+// console.log(result) //{vegetables: Array(1), fruits: Array(2), meat: Array(2)}fruits: Array(2)0: {name: 'bananas', type: 'fruits', quantity: 0}1: {name: 'cherries', type: 'fruits', quantity: 5}length: 2[[Prototype]]: Array(0)meat: Array(2)0: {name: 'goat', type: 'meat', quantity: 23}1: {name: 'fish', type: 'meat', quantity: 22}length: 2[[Prototype]]: Array(0)vegetables: [{…}]
+
+
+// const vegetables = inventory.filter((item) => item.type === 'vegetables')
+// const meat = inventory.filter((item) => item.type === 'meat')
+// const fruits = inventory.filter((item) => item.type === 'fruits')
+// console.log(vegetables) // (1) [{…}]
+// console.log(meat) //(2) [{…}, {…}]
+// console.log(fruits)// (2) [{…}, {…}]
+
+// const result = {
+//     vegetables: vegetables,
+//     meat: meat,
+//     fruits: fruits
+// }
+
+// const results = {
+//     vegetables: [{name: 'asparagus', type: 'vegetables', quantity: 5}],
+//     fruits: [{name: 'bananas', type: 'fruits', quantity: 0}, {name: 'cherries', type: 'fruits', quantity: 5}],
+//     meats: [{name: 'goat', type: 'meat', quantity: 23}, {name: 'fish', type: 'meat', quantity: 22}],
+// }
+// Task 1: Extracting Object Keys
+// Description:Create a function that takes an object as an argument and returns an array of its keys.
+// Instructions:
+// Define a function  that  to extract the keys of the object.Return the array of keys.
+
+// let obj1 = {'name': 'Diana', 'age': 28, 'city': 'Miami'}
+
+// function extractObj(obj1) {
+//     return result = Object.keys(obj1)
+// }
+
+// console.log(extractObj(obj1)) //(3) ['name', 'age', 'city']
+
+// Task: 2
+// Description:Create a function that takes an object as an argument and returns an array of its values.
+// Instructions:
+// Define a function  that  to extract the values of the object.Return the array of values.
+
+// let obj2 = {'name': 'Diana', 'age': 28, 'city': 'Miami'}
+
+// function objectifyFunc(obj2) {
+//     return result = Object.values(obj2)
+// }
+
+// console.log(objectifyFunc(obj2)) //(3) ['Diana', 28, 'Miami']
+
+//---2nd way of solving it-----
+// const objFunc = (obj2) => Object.values(obj2)
+// console.log(objFunc(obj2)) // ['Diana', 28, 'Miami']
+
+// Task 3:
+// Description:Create a function that takes an object as an argument and returns an array of its key-value pairs as arrays.
+// Instructions:
+// Define a function  that uses  to extract the key-value pairs of the object.Return the array of key-value pairs.
+// let obj3 = {'name': 'Diana', 'age': 28, 'city': 'Miami'}
+
+// const keyValArrFunc = (obj3) => Object.entries(obj3)
+// console.log(keyValArrFunc(obj3)); //(3) [Array(2), Array(2), Array(2)]
+
+// Bonus Task: Summarize Object Properties
+// Description:Create a function that takes an object as an argument and returns a summary string that lists all its properties and values.
+// Instructions:
+// Define a function  to extract the key-value pairs of the object.Construct and return a string that summarizes the object's properties and values.
+let obj4 = {'name': 'Diana', 'age': 28, 'city': 'Miami'}
+// const summaryStringListFunc = (obj4) => return `${object.property: object}`
+
+
+function summaryStringListFunc(obj4) {
+for(property in obj4){
+    console.log (`${property} : ${obj4[property]}`)};
+}
+
+summaryStringListFunc(obj4)// name : Diana
+// age : 28
+// city : Miami

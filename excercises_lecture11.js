@@ -259,7 +259,10 @@ const extraInfo = {
 // console.log(obj) //{name: 'Grigor', age: 24, profession: 'Dancer'} 
 
 console.log(user);
-Object.freeze(user)
+// Object.freeze(user)
 Object.preventExtensions(user) //with Object.preventExtensions() method we just forbid the adding of properties, but the deletion is allowed
 delete user.age    //{name_first: 'Mitko', email: 'mitko@abv.bg', age: 24, city: 'Sofia', level: 4, …}
+user.age = 33
 console.log(Object.isFrozen(user)) //here we can check if an object is frozen with the method Object.isFrozen(user)//true
+console.log(Object.isExtensible(user)) //false //this is a method to check if we have applied the Object.preventExtensions() method
+//Object. seal() allows modifications, but prevents additions and deletions of properties.

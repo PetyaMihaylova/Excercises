@@ -344,11 +344,14 @@ let obj4 = {'name': 'Diana', 'age': 28, 'city': 'Miami'}
 // const summaryStringListFunc = (obj4) => return `${object.property: object}`
 
 
-function summaryStringListFunc(obj4) {
-for(property in obj4){
-    console.log (`${property} : ${obj4[property]}`)};
-}
+// function summaryStringListFunc(obj4) {
+// for(property in obj4){
+//     console.log (`${property} : ${obj4[property]}`)};
+// }
 
-summaryStringListFunc(obj4)// name : Diana
+// summaryStringListFunc(obj4)// name : Diana
 // age : 28
 // city : Miami
+
+const summaryStringListFunc1 = (obj4) => JSON.stringify(Object.entries(obj4))
+console.log(typeof summaryStringListFunc1(obj4)) //string

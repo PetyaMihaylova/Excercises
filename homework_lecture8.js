@@ -25,32 +25,36 @@
 
 
 
-// // console.log(arrayOfWords)
+
 const passage = "The Little Prince is an amazing 1974 British-American sci-fi fantasy-musical film! Are you sure? It had screenplay and lyrics by Alan Jay Lerner, music by Frederick Loewe, arranged and orchestrated by Angela Morley. It was both directed and produced by Stanley Donen and based on the 1943 classic children-adult's novella, The Little Prince (Le Petit Prince), by the writer, poet and aviator Count Antoine de Saint-Exupéry, who disappeared near the end of the Second World War some 15 months after his fable was first published."
 
     function calculateARI(passage) {
 const arrayOfWords = passage.split(' ') 
+// console.log(arrayOfWords, 'Array of Words')
 const numberOfWords = arrayOfWords.length 
+console.log(numberOfWords, 'Number of Words')
 const arrayOfSentences = passage.split('.'|| '!' || '?') //here we need ? and !
-    
-    // console.log(numberOfWords, 'Number of words')
+const numberOfSentences = arrayOfSentences.length
+console.log(numberOfSentences, 'Number of Sentences')
+
     
     let numWords = 0;
     let numChars = 0;
     let numSent = 0;
 
-    arrayOfWords.forEach(word => numWords++)
-    console.log(numWords, 'Number of Words')
+    // arrayOfWords.forEach(word => numWords++)
+    // console.log(numWords, 'Number of Words')
     
-     arrayOfSentences.forEach(sentence => numSent++)
-    console.log(numSent, 'Number of Sentences')
+    //  arrayOfSentences.forEach(sentence => numSent++)
+    // console.log(numSent, 'Number of Sentences')
 
-     for(let char of arrayOfWords){
-        console.log(char)
-       return numChars++
+    for (let i = 0; i < arrayOfWords.length; i++) {
+        console.log(numChars++);
+    }
+   return(numChars, 'Number of Characters')
    }
-   console.log(numChars, 'Number of Characters')
+
   
-}
+
 
  console.log(calculateARI(passage))

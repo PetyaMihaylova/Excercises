@@ -1,5 +1,6 @@
-"{
-"name": "Muhammad Ali",
-"gender": "male",
-"age": 23
-}" //this javascript object, insofar as it is in a .json file, it is the equivalent to a string
+// "{
+// "name": "Muhammad Ali",
+// "gender": "male",
+// "age": 23
+// }" //this javascript object, insofar as it is in a .json file, it is the equivalent to a string
+

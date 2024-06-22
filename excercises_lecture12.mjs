@@ -74,10 +74,14 @@ const car2 = new Object({
 
 class Car {
     #id = '1234'
-    constructor(brand, model, year){
+    fuel = ['diesel', 'electric', 'gasoline', 'natural gas']
+    constructor(brand, model, year, fuel){
         this.brand = brand; //here, we are constructing key-value pairs with this. HOwever, here, the key-value relationship is represented by an equal = sign, not by :
         this.model = model;
         this.year = year;
+        if(this.fuel.includes(fuel)) {
+          this.fuel = fuel
+        } else {console.error ('bad fuel type')} //bad fuel type
     }
 
 checkPrice() {
@@ -107,9 +111,27 @@ else {console.error('Id must be a string and be exactly 4 symbols')}
 }
 
 
-const myCar = new Car('VW', 'Polo', 2018) //2000
-const yourCar = new Car('Toyota', 'Master', 2018)//1000
-yourCar.id = 1234 //We get thrown the following error: "Id must be a string and be exactly 4 symbols"
+
+const myCar = new Car('VW', 'Polo', 2018, 'diesel') //2000
+// delete myCar.brand //in this way we can delete the values we have used for the constructor
+// myCar.__proto__.run = function (){
+//     console.log('You are running' + ' ' +this.brand)
+// }
+
+// myCar.run() //You are running VW
+
+// const array = [1, 2, 3, 4]
+// array.__proto__.map = () => {console.log('nyama map veche')}//nyama map veche
+// array.map();
+
+
+
+// console.log(myCar); //Car {#id: '1234', model: 'Polo', year: 2018}// Here we managed to delete the brand
+
+// myCar.info = 'foo' //Uncaught TypeError TypeError: Cannot set property info of #<Car> which has only a getter
+
+// const yourCar = new Car('Toyota', 'Master', 2018)//1000
+// yourCar.id = 1234 //We get thrown the following error: "Id must be a string and be exactly 4 symbols"
 // myCar.info = 2 //"ncaught TypeError TypeError: Cannot set property info of #<Car> which has only a getter." Here, we cannot set a property to the object by calling the object and its method with a dot,
 //the same way we change key-value pairs in an object, because, with teh Get methods, we only get
 //information, we cannot set it. In that sense, the Getter is not exactly key: value pair in an object
@@ -143,3 +165,23 @@ yourCar.id = 1234 //We get thrown the following error: "Id must be a string and 
 // obj.id = 4321
 
 //Getters can also have conditions. E.g., upon the fulfillment of a certain condition, we can get particular information
+
+class Vehicle {
+    constructor (brand, model){
+        this.brand = brand;
+        this.model = model;
+    }
+
+    get info(){
+        `${this.brand} ${this.model}`
+    }
+    static getType() {
+        return 'Vehicle'
+    }  //static methods are defined directly in a class and not in an instance of class
+}
+
+console.log(Vehicle.getType());// Vehicle
+
+const Vehicle1 = new Vehicle('Toyota', 'Yaris')
+console.log(Vehicle1.getType());//Here we will get an error, because Vehicle1 is an instance of the class Vehicle, 
+//and the static method static getType() will only work with the class Vehicle, not with its instance Vehicle1

@@ -183,5 +183,36 @@ class Vehicle {
 console.log(Vehicle.getType());// Vehicle
 
 const Vehicle1 = new Vehicle('Toyota', 'Yaris')
-console.log(Vehicle1.getType());//Here we will get an error, because Vehicle1 is an instance of the class Vehicle, 
+// console.log(Vehicle1.getType());//Here we will get an error, because Vehicle1 is an instance of the class Vehicle, 
 //and the static method static getType() will only work with the class Vehicle, not with its instance Vehicle1
+
+console.log(Vehicle.info);
+
+class CalculatorFactory {
+    static Add(a, b){
+        return a+b
+    }
+    static Multiply(a,b){
+        return a*b
+    }
+
+}
+console.lo
+function myConstructor(result){
+const myObj = {
+    result: result,
+    Add: (a, b) => a+b,
+    Multiply: (a, b) => a * b,
+}
+
+return myObj}
+
+const myObj = myConstructor(0)
+myObj.Add(2, 4)
+console.log(myObj.result);
+
+class Truck extends Vehicle { //with extends we extend the class Vehicle and everything we have in class Vehicle, except for the static method, we can have in class Truck
+    constructor(brand, model, capacity){
+
+    }
+}

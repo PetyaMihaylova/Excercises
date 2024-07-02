@@ -49,70 +49,70 @@ console.log(person.fullName()); //John Doe
 // console.log(count.number, count.timeIncreased, count.numberUsed);//30 4 (4) [4, 5, 12, 9]
 
 
-const car = {
-    brand: 'Toyota',
-    model: 'Avensis',
-    year: 2021,
-    getCarInfo: function (){
-        return `${this.brand}, ${this.model}, ${this.year}`
-    }
-}
+// const car = {
+//     brand: 'Toyota',
+//     model: 'Avensis',
+//     year: 2021,
+//     getCarInfo: function (){
+//         return `${this.brand}, ${this.model}, ${this.year}`
+//     }
+// }
 
-const car2 = new Object({
-    brand: 'Toyota',
-    model: 'Avensis',
-    year: 2021,
-    getCarInfo: function (){
-        return `${this.brand}, ${this.model}, ${this.year}`
-    }
-})
+// const car2 = new Object({
+//     brand: 'Toyota',
+//     model: 'Avensis',
+//     year: 2021,
+//     getCarInfo: function (){
+//         return `${this.brand}, ${this.model}, ${this.year}`
+//     }
+// })
 
-// //in the moment when we create something, we call a special function called COnstructor
-// console.log(car.getCarInfo()); //Toyota, Avensis, 2021
+// // //in the moment when we create something, we call a special function called COnstructor
+// // console.log(car.getCarInfo()); //Toyota, Avensis, 2021
 
-// new Object{}
+// // new Object{}
 
-class Car {
-    #id = '1234'
-    fuel = ['diesel', 'electric', 'gasoline', 'natural gas']
-    constructor(brand, model, year, fuel){
-        this.brand = brand; //here, we are constructing key-value pairs with this. HOwever, here, the key-value relationship is represented by an equal = sign, not by :
-        this.model = model;
-        this.year = year;
-        if(this.fuel.includes(fuel)) {
-          this.fuel = fuel
-        } else {console.error ('bad fuel type')} //bad fuel type
-    }
+// class Car {
+//     #id = '1234'
+//     fuel = ['diesel', 'electric', 'gasoline', 'natural gas']
+//     constructor(brand, model, year, fuel){
+//         this.brand = brand; //here, we are constructing key-value pairs with this. HOwever, here, the key-value relationship is represented by an equal = sign, not by :
+//         this.model = model;
+//         this.year = year;
+//         if(this.fuel.includes(fuel)) {
+//           this.fuel = fuel
+//         } else {console.error ('bad fuel type')} //bad fuel type
+//     }
 
-checkPrice() {
+// checkPrice() {
 
-if(this.brand === 'Toyota'){
-    return 1000
-} else if(this.brand === 'VW') {return 2000}
-else if(this.brand === 'BMW') {return 3000}
-else {return 0}
-}
+// if(this.brand === 'Toyota'){
+//     return 1000
+// } else if(this.brand === 'VW') {return 2000}
+// else if(this.brand === 'BMW') {return 3000}
+// else {return 0}
+// }
 
-get info() {  //Getters are like any other method. However, they give us the opportunity to receive info from the object
-    return `${this.brand}, ${this.model}, ${this.year}`
+// get info() {  //Getters are like any other method. However, they give us the opportunity to receive info from the object
+//     return `${this.brand}, ${this.model}, ${this.year}`
 
-}
-get id() {
-    return this.#id
-}
-set id(x) {
-    if(typeof x === 'string' && x.length === 4){
+// }
+// get id() {
+//     return this.#id
+// }
+// set id(x) {
+//     if(typeof x === 'string' && x.length === 4){
 
     
-    this.#id = x} //The Setter allows us to set a new id. Also, the Setter allows us to create conditional logic for setting of certain things inside the object we created
-else {console.error('Id must be a string and be exactly 4 symbols')}
+//     this.#id = x} //The Setter allows us to set a new id. Also, the Setter allows us to create conditional logic for setting of certain things inside the object we created
+// else {console.error('Id must be a string and be exactly 4 symbols')}
 
-}
-}
+// }
+// }
 
 
 
-const myCar = new Car('VW', 'Polo', 2018, 'diesel') //2000
+// const myCar = new Car('VW', 'Polo', 2018, 'diesel') //2000
 // delete myCar.brand //in this way we can delete the values we have used for the constructor
 // myCar.__proto__.run = function (){
 //     console.log('You are running' + ' ' +this.brand)
@@ -172,7 +172,7 @@ class Vehicle {
         this.model = model;
     }
 
-    get info(){
+    getInfo(){
         `${this.brand} ${this.model}`
     }
     static getType() {
@@ -180,39 +180,67 @@ class Vehicle {
     }  //static methods are defined directly in a class and not in an instance of class
 }
 
-console.log(Vehicle.getType());// Vehicle
+// console.log(Vehicle.getType());// Vehicle
 
-const Vehicle1 = new Vehicle('Toyota', 'Yaris')
+// const Vehicle1 = new Vehicle('Toyota', 'Yaris')
 // console.log(Vehicle1.getType());//Here we will get an error, because Vehicle1 is an instance of the class Vehicle, 
 //and the static method static getType() will only work with the class Vehicle, not with its instance Vehicle1
 
-console.log(Vehicle.info);
+// console.log(Vehicle.info);
 
-class CalculatorFactory {
-    static Add(a, b){
-        return a+b
-    }
-    static Multiply(a,b){
-        return a*b
-    }
+// class CalculatorFactory {
+//     static Add(a, b){
+//         return a+b
+//     }
+//     static Multiply(a,b){
+//         return a*b
+//     }
 
-}
-console.lo
-function myConstructor(result){
-const myObj = {
-    result: result,
-    Add: (a, b) => a+b,
-    Multiply: (a, b) => a * b,
-}
+// }
+// console.log
+// function myConstructor(result){
+// const myObj = {
+//     result: result,
+//     Add: (a, b) => a+b,
+//     Multiply: (a, b) => a * b,
+// }
 
-return myObj}
+// return myObj}
 
-const myObj = myConstructor(0)
-myObj.Add(2, 4)
-console.log(myObj.result);
+// const myObj = myConstructor(0)
+// myObj.Add(2, 4)
+// console.log(myObj.result);
 
 class Truck extends Vehicle { //with extends we extend the class Vehicle and everything we have in class Vehicle, except for the static method, we can have in class Truck
     constructor(brand, model, capacity){
-
+        super(brand, model)
+        this.capacity = capacity
     }
+    getInfo(){
+        return `${super.getInfo()} with a capacity of ${this.capacity} tons.` //here super points to Vehicle class, so we can re-use the getInfo() method from Vehicle into Truck
+    }
+    static getType() {
+        return 'Truck'
+    } 
 }
+
+class Car extends Vehicle{
+   constructor (brand, model, type){
+    super(brand, model)
+    this.type = type
+   }
+
+   getInfo() {
+    return `${super.getInfo()} with a type of ${this.type}.`
+   }
+   static getType() {
+    return 'Car'
+} 
+}
+
+const myTruck = new Truck('Ford', 'F-150', 3)
+console.log(myTruck); //Truck {brand: 'Ford', model: 'F-150', capacity: 3}
+
+const myCar = new Car('Ford', 'Focus', 'combi')
+console.log(myCar); //Car {brand: 'Ford', model: 'Focus', type: 'combi'}
+console.log(myCar.getInfo());

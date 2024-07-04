@@ -7,10 +7,23 @@ const app = () => {
     // console.log({myElementsByClassName});
 
     //querySelector() can select elements by tag name, by class name and by id. 
-    //When we use the tag name, we always select the first element that is a match for the tag.
-    const myDivQ = document.querySelector('div')
-    myDiv.style.backgroundColor = 'green'
-    console.log({myDivQ});
+    // //When we use the tag name, we always select the first element that is a match for the tag.
+    // const myDivQ = document.querySelector('div')
+    
+    // console.log({myDivQ});
+
+    // const myDivQ = document.querySelector('#myDiv')
+    const myDivQ = document.querySelector('.MyClass > .myP')
+    myDivQ.style.backgroundColor = 'green'
+    myDivQ.innerText = 'green'
+    console.log(myDivQ);
+    console.log(myDivQ.innerText);
+
+    // const myDivsQ = document.querySelectorAll('div')
+    //When we use document.querySelectorAll(), we get all elements that match the condition in the brackets.
+    
+    const myDivsQ = document.querySelectorAll('.MyClass')
+    console.log(myDivsQ);
 
     // console.log(allDivs.length)
     // console.log(allDivs.item(0))
@@ -18,8 +31,8 @@ const app = () => {
     // console.log(allDivs[allDivs.length-1])
 // console.log(allDivs.forEach((e) => console.log(e)))
 
-console.log(allDivs.forEach((div, index) => div.innerText = index))
-myElementsByClassName.forEach((element, index) => element.style.backgroundColor = 'red')
+// console.log(allDivs.forEach((div, index) => div.innerText = index))
+// myElementsByClassName.forEach((element, index) => element.style.backgroundColor = 'red')
 }
 
 

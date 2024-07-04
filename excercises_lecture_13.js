@@ -102,20 +102,34 @@
 // console.log(document);
 // console.log({document})
 
-const app = () => {
+const app = (event) => {
+    
+//helpers
+const createElement = (tagName, innerText, className)=> {
+    const element = document.createElement(tagName)
+    if(innerText){
+    element.innerText = innerText}
+    if(className){
+        element.className = className}
+    
+    
+
+return element
+}
+
+//states
+let count = 0
 
 //references to html elements
-
-    
+   
     const incrementButton = document.getElementById('increment')
-    const decrementButton = document.createElement('button')
-    const countPtag = document.createElement('p')
+    const decrementButton = createElement('button', '-')
+    const countPtag = createElement('p', count.toString())
     const body = document.getElementById('body')
 
 
-//states
-    let count = 0
-    countPtag.innerText = 0
+
+    // countPtag.innerText = count
 
 
 //append or edit HTML elements
@@ -125,14 +139,14 @@ const app = () => {
     body.appendChild(decrementButton)
   
 
-    // console.log(countPtag);
-    // console.log({decrementButton});
+    // console.log(countPtag);+
+        // console.log({decrementButton});
     // console.log({incrementButton});
     // incrementButton.style
     // .backgroundColor = "red"
     
 //all event handlers
-    const increaseCount = () => {
+    const increaseCount = (event) => {
             count++
             countPtag.innerText = count
             // countPtag.style.backgroundColor = 'blue'
@@ -141,7 +155,7 @@ const app = () => {
             // console.log(count);
     }
 
-    const decrementCount = () => {
+    const decrementCount = (event) => {
         count--
         countPtag.innerText = count
        
@@ -154,8 +168,8 @@ const app = () => {
     decrementButton.addEventListener('click', decrementCount)
 
 
-}
-
+    }
+//BOM
 window.addEventListener('load', app)
 
 //higher order function is a function, which, within itself, uses other functions

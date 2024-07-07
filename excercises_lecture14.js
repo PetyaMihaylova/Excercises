@@ -1,3 +1,5 @@
+//need to correct later
+
 // const app = () => {
     // const myDiv = document.getElementById('myDiv')
     // console.log({myDiv});
@@ -89,23 +91,92 @@
 //-----------------------------------------------
 
 const app = () => {
-    console.log('working');
+   
     const board = document.querySelector('.board')
     console.log(board);
     // const cells = board.children //we will get an HTML collection of all cells, which are chidlren of board
-    const cells = document.querySelectorAll('.cell') //Here we get a Nodes List
+    const cells = Array.from(document.querySelectorAll('.cell')) //Here we get a Nodes List
     // const cells = document.getElementsByClassName('cell')//here we get an HTML collection
-
-    console.log(cells);
-
+    const infoDisplay = document.createElement('p')
+    infoDisplay.innerText = `${currentPlayer} is on a turn`
+    document.body.appendChild(infoDisplay)
     let currentPlayer = 'X'
 
-    function handleCellClick(){
-        console.log('click');
-
+    function handleCellClick(event){
+    const cell = event.target //this is how we will know where the event is coming from, from which cell
+    const index = cell.dataset.index
+    
+    if(isValidMove(cell)){
+        makeMove(cell)
+        if (checkWin()){
+            announceWinner()
+        }
+        else if (checkDraw()) {
+            announceDraw()
+        }
+        else {
+            changePlayer()
+        }
+      
     }
-    board.addEventListener('click', handleCellClick)
+    }
 
+    function makeMove(cell){
+    cell.textConent = currentPlayer
+    cell.classList.add(currentPlayer)
+        }
+
+    function changePlayer(){ 
+        currentPlayer = currentPlayer === 'X' ? 'O': 'X'
+        infoDisplay.innerText = `${currentPlayer} is on a turn`
+    }
+
+    /**
+     * Function that checks if the move is valid.
+     *  
+     */
+
+    function isValidMove(cell){
+        return cell.textConent === ''
+    }
+
+    function checkWin(){
+        const winningCombinations = [
+            [0, 1, 2],
+            [3, 4, 5],
+            [6, 7, 8],
+            [0, 3, 6],
+            [1, 4, 7],
+            [2, 5, 8],
+            [0, 4, 8],
+            [2, 4, 6],
+        ]
+ return winningCombinations.some(combination => {
+    return combination.every(index => {
+        return cells[index].classList.contains(currentPlayer)
+    })
+ })
+    }
+    function announceWinner(){
+        alert(`Player ${currentPlayer} wins!`)
+        resetBoard()
+    }
+
+    function announceDraw(){
+        alert('It is a draw!')
+        resetBoard()
+    }
+    function checkDraw(){
+        return cells.every(cell => cell.textContent !== '')
+    }
+
+    function resetBoard(){
+        cells.forEach(cell => {
+        cell.textConent = ''
+        cell.classList.remove('X', 'O')                     })
+    }
+    
+    board.addEventListener('click', handleCellClick)
 }
 
 window.addEventListener('load', app)

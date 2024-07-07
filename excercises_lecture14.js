@@ -41,7 +41,7 @@
 // myElementsByClassName.forEach((element, index) => element.style.backgroundColor = 'red')
 // const myDivQ = document.querySelector('.MyClass > .myP')
 // console.log(myDivsQ.forEach((e) => e.style.backgroundColor = 'red'))
-}
+// }
 
 
 // window.addEventListener('load', app)
@@ -66,3 +66,49 @@
 //going to be reflected in the DOM immediately. The NodesList, however, is static. This means,
 //that sometimes, when we do something and are wondering why the DOM is not updating, we are 
 //probably using a NodesList, rather than an HTML COllection and we should change to HTML COllection.
+
+//---------------------------------------------
+
+// const app = () => {
+
+    // const paragraphs = document.getElementsByTagName('p') //getElementsByTagName gives us an HTML collection
+    // const paragraphs = document.querySelectorAll('p')
+    // console.log(paragraphs, 'Before Update'); 
+    // const newParagraph = document.createElement('p')
+    // document.body.appendChild(newParagraph)
+    // newParagraph.innerText = 'P4'
+    // console.log(paragraphs, 'After Update'); //we see that, having used getELementsByTagName, we managed to create an extra paragraph P, and after the console log, 
+    //we get a new,updated HTML Collection with 4 paragraphs, rather than 3. If we use document.querySelectorAll('p'), after we use document.createElement('p),
+    //we cannot create a 4th paragraph P
+//     const paragraphs1 = document.querySelectorAll('p')
+//     console.log(paragraphs1);
+// }
+
+// window.addEventListener('load', app)
+
+//-----------------------------------------------
+
+const app = () => {
+    console.log('working');
+    const board = document.querySelector('.board')
+    console.log(board);
+    // const cells = board.children //we will get an HTML collection of all cells, which are chidlren of board
+    const cells = document.querySelectorAll('.cell') //Here we get a Nodes List
+    // const cells = document.getElementsByClassName('cell')//here we get an HTML collection
+
+    console.log(cells);
+
+    let currentPlayer = 'X'
+
+    function handleCellClick(){
+        console.log('click');
+
+    }
+    board.addEventListener('click', handleCellClick)
+
+}
+
+window.addEventListener('load', app)
+
+//target div.board -- the target is a property of the event object, which gives us information on
+//where exactly the event came from. In this case, the event came from the board

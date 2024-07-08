@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="excercices_lecture16.js"></script>
+    <style>
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 50%;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 10px;
+            
+        }
+
+        form input[type ='text'],
+        form input[type ='email'],
+        form textArea {
+            width: 100%;
+            padding: 12px 20px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px
+
+        }
+    </style>
+</head>
+<body>
+    <form id = "form">
+    <label for = 'name'>Name: </label>
+    <input type = 'text' id ='name'>
+    <label for = 'email'>Email: </label>
+    <input type = 'text' id ='email'>
+    <label for = 'message'>Message: </label>
+    <textArea id = 'message'></textArea>
+    <button type = 'submit' id='button'>Submit</button>
+</form>
+
+
+    
+</body>
+</html>

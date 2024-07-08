@@ -5,6 +5,17 @@ const emailInput = document.getElementById('email')
 const messageInput = document.getElementById('message')
 const submitButton = document.getElementById('button')
 
+const emptyInputs = [];
+
+const validateInput = (input) => {
+    if (!input.value) {
+        emptyInputs.push(input.name)
+        input.style.border = 'red solid 2px'
+      } else {
+        input.style.border = ''
+    }
+}
+
 console.log(form, nameInput, emailInput, messageInput, submitButton);
 
 const submitHandler = (event) => {
@@ -15,9 +26,19 @@ const submitHandler = (event) => {
     if(nameValue && emailValue && messageValue) {
         alert (`Your name from ${nameValue} with email ${emailValue} and Message ${messageValue}`)
  
+    nameInput.value = ''
+    emailInput.value = ''
+    messageInput.value = ''
+
     } else {
-        alert('Please fill all inputs!')
+    validateInput(nameInput)
+    validateInput(emailInput)
+    validateInput(messageInput)
+
+
+        alert(`Please fill ${emptyInputs.join(', ')}!`)
     }
+
 }
 
 submitButton.addEventListener('click', submitHandler)

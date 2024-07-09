@@ -5,7 +5,7 @@
 // const messageInput = document.getElementById('message')
 // const submitButton = document.getElementById('button')
 
-// const emptyInputs = [];
+
 
 // const validateInput = (input) => {
 //     if (!input.value) {
@@ -33,15 +33,18 @@
 //     nameInput.value = ''
 //     emailInput.value = ''
 //     messageInput.value = ''
+    
+ 
 
-    // } else {
-    // validateInput(nameInput)
-    // validateInput(emailInput)
-    // validateInput(messageInput)
+//     } else {
+//     // validateInput(nameInput)
+//     // validateInput(emailInput)
+//     // validateInput(messageInput)
+    
 
-
-    //     alert(`Please fill ${emptyInputs.join(', ')}!`)
-    // }
+//         alert(`Please fill all fields!`)
+       
+//     }
 
 // }
 
@@ -78,6 +81,7 @@ const app = () => {
     const emptyInputs = [];
     
     const validateInput = (input, minLength) => {
+        console.log(input);
         if (input.value.length < minLength) {
             emptyInputs.push(input.name)
             input.style.boxShadow = '0px 0px 0px 3px red'
@@ -87,23 +91,49 @@ const app = () => {
         }
     }
 
+    const handleTargetValidation = (event) => {
+        if (event.target.matches('#name, #email, #message')) {
+          validateInput(event.target, 4)
+        }}
 
-
-    nameInput.addEventListener('input', ()=> validateInput(nameInput, 4))
-    emailInput.addEventListener('input', ()=> validateInput(emailInput, 5))
-    messageInput.addEventListener('input', ()=> validateInput(messageInput, 10))
+    form.addEventListener('input', handleTargetValidation)
 
     const submitHandler = (event) => {
 
-    }
 
-    submitButton.addEventListener('click', submitHandler)
-}
-
-window.addEventListener('load', app)
+        event.preventDefault()
+            const formData = new FormData(form)
+            console.log(formData);
+            
+            const nameValue = formData.get('name');
+            const emailValue = formData.get('email');
+            const messageValue = formData.get('message');
+            if(nameValue && emailValue && messageValue) {
+                alert (`Your name from ${nameValue} with email ${emailValue} and Message ${messageValue}`)
+         
+            nameInput.value = ''
+            emailInput.value = ''
+            messageInput.value = ''
+            form.remove()
+                
+            } else {
+                            
+                alert(`Please fill all fields!`)
+               
+            }
+        
+        }
+        
+        submitButton.addEventListener('click', submitHandler)
+        }
 
 //In the EventListener, instead of 'change', one can use 'input', 'focus' or 'blur' as events. They all have different meanings. 
 //For example, the event of 'blur' triggers when we unfocus something, so it is the opposite of 'focus'.
 //For 'focus', one has to type something, then unfocus, then focus again, in order for the event to be triggered.
 //In this sense, 'blur' is better to use, because the moment we type the info in the input field and go to field no.2,
 //the event triggers and we have red color if input no.1 requirements are not met.
+
+//In order to submit the form, you can do it with HTML or you can do it with JavaScript. 
+//To do it with JavaScript, you have to know how to create asynchronous JavaScript and to work with promises.
+
+//After we submit the form, we can use the remove() method on the form, that is form.remove() to delete the form from the webpage.

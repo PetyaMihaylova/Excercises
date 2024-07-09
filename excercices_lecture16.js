@@ -16,30 +16,34 @@ const validateInput = (input) => {
     }
 }
 
-console.log(form, nameInput, emailInput, messageInput, submitButton);
+// console.log(form, nameInput, emailInput, messageInput, submitButton);
 
-const submitHandler = (event) => {
-    event.preventDefault()
-    const nameValue = nameInput.value;
-    const emailValue = emailInput.value;
-    const messageValue = messageInput.value;
-    if(nameValue && emailValue && messageValue) {
-        alert (`Your name from ${nameValue} with email ${emailValue} and Message ${messageValue}`)
+// const submitHandler = (event) => {
+//     event.preventDefault()
+//     const formData = new FormData(form)
+//     console.log(formData);
+    
+
+//     const nameValue = formData.get('name');
+//     const emailValue = formData.get('email');
+//     const messageValue = formData.get('message');
+//     if(nameValue && emailValue && messageValue) {
+//         alert (`Your name from ${nameValue} with email ${emailValue} and Message ${messageValue}`)
  
-    nameInput.value = ''
-    emailInput.value = ''
-    messageInput.value = ''
+//     nameInput.value = ''
+//     emailInput.value = ''
+//     messageInput.value = ''
 
-    } else {
-    validateInput(nameInput)
-    validateInput(emailInput)
-    validateInput(messageInput)
+    // } else {
+    // validateInput(nameInput)
+    // validateInput(emailInput)
+    // validateInput(messageInput)
 
 
-        alert(`Please fill ${emptyInputs.join(', ')}!`)
-    }
+    //     alert(`Please fill ${emptyInputs.join(', ')}!`)
+    // }
 
-}
+// }
 
 submitButton.addEventListener('click', submitHandler)
 }
@@ -59,3 +63,6 @@ window.addEventListener('load', app)
 //When we write if(nameValue && emailValue && messageValue), we mean that if these constants are not empty,
 //otherwise, when they are empty strings or just empty, the value inside the if-statement will be falsy,
 //hence the body of the function will not be run!
+
+//Instead of validating the input on the "Submit button" step, we can validate it in the inputs itself.
+//We can add eventListeners on each input, which will validate the inputted information.

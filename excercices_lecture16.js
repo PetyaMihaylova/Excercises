@@ -1,20 +1,20 @@
-const app = () => {
-const form = document.getElementById('form')
-const nameInput = document.getElementById('name')
-const emailInput = document.getElementById('email')
-const messageInput = document.getElementById('message')
-const submitButton = document.getElementById('button')
+// const app = () => {
+// const form = document.getElementById('form')
+// const nameInput = document.getElementById('name')
+// const emailInput = document.getElementById('email')
+// const messageInput = document.getElementById('message')
+// const submitButton = document.getElementById('button')
 
-const emptyInputs = [];
+// const emptyInputs = [];
 
-const validateInput = (input) => {
-    if (!input.value) {
-        emptyInputs.push(input.name)
-        input.style.border = 'red solid 2px'
-      } else {
-        input.style.border = ''
-    }
-}
+// const validateInput = (input) => {
+//     if (!input.value) {
+//         emptyInputs.push(input.name)
+//         input.style.border = 'red solid 2px'
+//       } else {
+//         input.style.border = ''
+//     }
+// }
 
 // console.log(form, nameInput, emailInput, messageInput, submitButton);
 
@@ -45,10 +45,10 @@ const validateInput = (input) => {
 
 // }
 
-submitButton.addEventListener('click', submitHandler)
-}
+// submitButton.addEventListener('click', submitHandler)
+// }
 
-window.addEventListener('load', app)
+// window.addEventListener('load', app)
 
 //Every single event handler that we add to the Event Listener comes with an object called event. 
 //This object comes with its own methods. Generally, the default behavior of an HTML form after
@@ -66,3 +66,44 @@ window.addEventListener('load', app)
 
 //Instead of validating the input on the "Submit button" step, we can validate it in the inputs itself.
 //We can add eventListeners on each input, which will validate the inputted information.
+//-----------------------------------
+
+const app = () => {
+    const form = document.getElementById('form')
+    const nameInput = document.getElementById('name')
+    const emailInput = document.getElementById('email')
+    const messageInput = document.getElementById('message')
+    const submitButton = document.getElementById('button')
+    
+    const emptyInputs = [];
+    
+    const validateInput = (input, minLength) => {
+        if (input.value.length < minLength) {
+            emptyInputs.push(input.name)
+            input.style.boxShadow = '0px 0px 0px 3px red'
+            
+          } else {
+            input.style.boxShadow = '0px 0px 0px 3px green'
+        }
+    }
+
+
+
+    nameInput.addEventListener('input', ()=> validateInput(nameInput, 4))
+    emailInput.addEventListener('input', ()=> validateInput(emailInput, 5))
+    messageInput.addEventListener('input', ()=> validateInput(messageInput, 10))
+
+    const submitHandler = (event) => {
+
+    }
+
+    submitButton.addEventListener('click', submitHandler)
+}
+
+window.addEventListener('load', app)
+
+//In the EventListener, instead of 'change', one can use 'input', 'focus' or 'blur' as events. They all have different meanings. 
+//For example, the event of 'blur' triggers when we unfocus something, so it is the opposite of 'focus'.
+//For 'focus', one has to type something, then unfocus, then focus again, in order for the event to be triggered.
+//In this sense, 'blur' is better to use, because the moment we type the info in the input field and go to field no.2,
+//the event triggers and we have red color if input no.1 requirements are not met.

@@ -77,30 +77,32 @@ const app = () => {
     const emailInput = document.getElementById('email')
     const messageInput = document.getElementById('message')
     const submitButton = document.getElementById('button')
+    submitButton.disabled = true
     
-    const emptyInputs = [];
-    
+        
     const validateInput = (input, minLength) => {
-        console.log(input);
+        
+        if(nameInput.value.length >= minLength && 
+          emailInput.value.length >= minLength && 
+          messageInput.value.length >= minLength) {        
+          submitButton.disabled = false
+        }
         if (input.value.length < minLength) {
-            emptyInputs.push(input.name)
-            input.style.boxShadow = '0px 0px 0px 3px red'
-            
+            input.style.boxShadow = '0px 0px 0px 3px red'           
           } else {
             input.style.boxShadow = '0px 0px 0px 3px green'
-        }
+          }
     }
 
-    const handleTargetValidation = (event) => {
-        if (event.target.matches('#name, #email, #message')) {
-          validateInput(event.target, 4)
-        }}
+  
 
-    form.addEventListener('input', handleTargetValidation)
+    form.addEventListener('input', (event) => {
+        if (event.target.matches('#name, #email, #message')){
+            validateInput(event.target, 4)
+        };
+    })
 
     const submitHandler = (event) => {
-
-
         event.preventDefault()
             const formData = new FormData(form)
             console.log(formData);
@@ -115,6 +117,11 @@ const app = () => {
             emailInput.value = ''
             messageInput.value = ''
             form.remove()
+            //form.style.display = 'none'
+            const showForm = document.createElement('button')
+            showForm.textContent = 'Show form'
+            document.body.appendChild(showForm)
+            showForm.addEventListener('click', () => form.style.display = 'flex')
                 
             } else {
                             
@@ -136,4 +143,9 @@ const app = () => {
 //In order to submit the form, you can do it with HTML or you can do it with JavaScript. 
 //To do it with JavaScript, you have to know how to create asynchronous JavaScript and to work with promises.
 
-//After we submit the form, we can use the remove() method on the form, that is form.remove() to delete the form from the webpage.
+//After we submit the form, we can use the remove() method on the form, that is form.remove() to delete the form from the webpage. Alternatively, 
+//we can use form.style.display = 'none'.
+
+//input.value is the input that has been currently selected/pressed.
+//name.value, email.value, message.value are the inputs that need to be checked
+//if we want to validate the information at the moment of pressing the button Submit.

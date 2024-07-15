@@ -1,4 +1,5 @@
 const app = () => {
+    debugger
 
 const ul = document.getElementById('taskList') ////create ul const that applies to all 3 buttons
 console.log(ul)

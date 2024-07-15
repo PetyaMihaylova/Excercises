@@ -1,0 +1,14 @@
+//you have to save more than 1 key: the text of your to-do,
+//the status of your to-do: complete or Not
+//and every time the page loads, you have to check
+//somewhere, whether you had saved all to-dos, and on that basis
+//for each of these to-dos to create the necessary html and js
+//to add the eventlisteners and to show them on the page when the page loads
+//afterwards, the possibility to add new and remove all todos.
+// however, when you close the browser and have to return to your todos, they will be there.
+
+Take the Session Storage, Local Storage and Cookies and update the ToDo application 
+so that the ToDos are remembered e.g. in the Session Storage and when the application
+loads, to check, whether you have saved ToDos, and if you have, for them to appear below in the screen,
+so that the application works as expected. Not that, when you close the application, for all of the
+ToDos to have disappeared.

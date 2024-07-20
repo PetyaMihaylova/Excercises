@@ -1,3 +1,66 @@
-body {
-    background-color: 'red';
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: aqua;
+    height: 3rem;
+    border-bottom: 2px solid green;
+    position: sticky;
+    width: 100%;
+    top: 0;
+}
+
+.ul {
+    display: flex;
+    list-style: none;
+    gap: 60px;
+    margin-left: 140px;
+
+}
+
+.hero {
+    height: 60vh;
+    background-image: url('design-1721468839641.jpg');
+    border: 4mm ridge rgba(211, 220, 50, 0.6)
+}
+
+.view {
+    height: 100vh;
+    text-align: center;
+    border-bottom: 2px solid grey;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: aqua;
+    height: 3rem;
+}
+
+.nav-li {
+    padding-right: 8px;
+    border-right: 2px solid black;
+
+}
+
+.anchor {
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 520;
+}
+
+.card {
+    border: 4px solid red;
+    border-radius: 20px;
+}
+
+.buttonOneJoke {
+    
 }

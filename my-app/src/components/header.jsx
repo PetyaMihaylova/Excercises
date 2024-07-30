@@ -1,5 +1,6 @@
-const Header = () => {
-    const text = 'My First Component'
+const Header = (props) => {
+    const {text} = props
+   
     return <h1 style ={{color: 'red'}}>{text}</h1>
 }
 

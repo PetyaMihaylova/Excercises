@@ -1,25 +1,22 @@
 import './App.css';
-import About from './screens/about';
-import Home from './screens/home';
-function App() {
- const userId='12345' 
- const userName='Petya'
-
-
-console.log(<About userId={userId} name='Petya'/>)
-;
-if(true){
-  return <>
-  <About />
-  <About userId={userId} userName={userName} text={'Hello world!'}/>
-  <About userId={userId} userName={userName} text={'Hello world2!'}/>
+import {Button} from './components/button';
+function App(props) {
+  const clickHandler = () => alert('click')
+  const clickHandler2 = () => alert('Hello from click2')
  
-   </>
-}else{
-  return <>  <Home userId={userId} userName={userName} />
+  return <>
+  <Button 
+  clickHandler = {clickHandler} 
+  text = {'button1'} 
+  backgroundColor = 'red' 
+  padding={10}/>
+  <Button 
+  clickHandler = {clickHandler2} 
+  text = {'button 2'} 
+  backgroundColor = 'green'
+  padding={20}/>
+
   </>
-}
-   
 }
 
 export default App;
